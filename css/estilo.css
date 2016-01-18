@@ -120,13 +120,24 @@ img.grayscale:hover {
 .navbar{
     background-color:#0F5D18;
     border-color: #2B7904;
+    height: 75px;
+}
+
+.navbar-brand{
+    line-height:35px;
+    font-size: 22px:
+}
+
+.navbar-nav>li>a {
+    line-height:35px;
+    font-size: 18px;   
 }
 
 
 
 .navbar-default .navbar-brand{color:#fbfbfb}
 
-.navbar-default .navbar-nav>li>a {color:#fbfbfb}
+.navbar-default .navbar-nav>li>a {color:#fbfbfb; background-color: #0F5D18;}
 
 
  .fix{
@@ -137,3 +148,5 @@ img.grayscale:hover {
     margin:0;
     z-index: 9999;
 }
+
+.navbar-toggle{z-index: 9999;}
