@@ -15,17 +15,16 @@ $(function() {
 });
 
 
-
-
-
-var wrap = $("#navbaramanda");
-
-wrap.on("scroll", function(e) {
-    
-  if (this.scrollTop > 147) {
-    wrap.addClass("fix-search");
-  } else {
-    wrap.removeClass("fix-search");
-  }
+var $window = $(window);
+var nav = $('#navbar-menu');
+$window.scroll(function(){
   
+    if ($window.scrollTop() >= 650) {
+       nav.addClass('fix');
+    }
+    else {
+       nav.removeClass('fix');
+    }
 });
+
+
