@@ -11,3 +11,13 @@ require('../../js/popover.js')
 require('../../js/scrollspy.js')
 require('../../js/tab.js')
 require('../../js/affix.js')
+var $window = $(window);
+var nav = $('#navbar');
+$window.scroll(function(){
+    if ($window.scrollTop() >= 300) {
+       nav.addClass('fixed-header');
+    }
+    else {
+       nav.removeClass('fixed-header');
+    }
+});

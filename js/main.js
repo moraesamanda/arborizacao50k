@@ -1,13 +1,5 @@
 $(function() {
     
-$('input[maxlength]').maxlength({
-        alwaysShow: true,
-        threshold: 10,
-        warningClass: "label label-success",
-        limitReachedClass: "label label-danger"
-    });
-    
-    
   $('#menu-navegacao').find('a').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
@@ -20,4 +12,20 @@ $('input[maxlength]').maxlength({
       }
     }
   });
+});
+
+
+
+
+
+var wrap = $("#navbaramanda");
+
+wrap.on("scroll", function(e) {
+    
+  if (this.scrollTop > 147) {
+    wrap.addClass("fix-search");
+  } else {
+    wrap.removeClass("fix-search");
+  }
+  
 });

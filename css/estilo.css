@@ -3,9 +3,7 @@
     font-weight: 300;
 }
 
-body {
-    padding-top: 50px;
-}
+
 
 section {
     padding-top: 25px;
@@ -118,3 +116,19 @@ img.grayscale:hover {
 .conteudo_painel_int {
     padding: 12px;   
 }
+
+.navbar{
+    background-color:#0F5D18;
+    border-color: #2B7904;
+}
+
+
+
+.navbar-default .navbar-brand{color:#fbfbfb}
+
+.navbar-default .navbar-nav>li>a {color:#fbfbfb}
+
+
+.navbaramanda {style="
+    width: 1170px;
+   }
