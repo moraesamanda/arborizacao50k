@@ -151,6 +151,14 @@ img.grayscale:hover {
 
 .navbar-toggle{z-index: 9999;}
 
+<<<<<<< HEAD
+h2{color:#0F5D18;}
+
+#radioBtn .notActive{
+    color: #3276b1;
+    background-color: #fff;
+}
+=======
 h2{color:#8db698;}
 h1{color:#616161;}
 
@@ -197,3 +205,4 @@ a:hover{
 
 
 
+>>>>>>> origin/master
