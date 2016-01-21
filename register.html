@@ -36,78 +36,116 @@
       <!-- quem somos -->
       <section id="quemsomos">
         <div class="container">
-			<form>
+			<div class="alert alert-danger" style="display:none">
+			 <!--<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>-->
+			  <strong></strong>
+			</div>
+			<form method="post">
 				<div class="row">
 					<div class="page-header"><h1>Cadastre-se</h1></div>
 				</div>
-				<div class="form-group" id="form-dados-pessoais">
-					<div class="row">
-						<div class="col-sm-5">
-							<h4>Nome</h4>
-							<input type="text" class="form-control input-lg" placeholder="Nome" required="true">
+				<div id="form-dados-pessoais">
+					<div class="form-group" >
+						<div class="row">
+							<div class="col-sm-5">
+								<h4>*Nome</h4>
+								<input name="Name" type="text" class="form-control input-lg" placeholder="Nome" required="true">
+							</div>
+							<div class="col-sm-5">
+								<h4>*Sobrenome</h4>
+								<input type="text" name="LastName" class="form-control input-lg" placeholder="Sobrenome" required="true">
+							</div>
 						</div>
-						<div class="col-sm-5">
-							<h4>Sobrenome</h4>
-							<input type="text" class="form-control input-lg" placeholder="Sobrenome" required="true">
+						
+						<div class="row">
+							<div class="col-sm-5">
+								<h4>*E-mail</h4>
+								<input type="email" name="Email" class="form-control input-lg" placeholder="E-mail" required="true"> 
+							</div>
+							<div class="col-sm-5">
+								<h4>*Confirme seu e-mail</h4>
+								<input type="email" id="email-repeat" class="form-control input-lg" placeholder="Confirme seu E-mail" required="true">
+							</div>
+						</div>
+						
+						<div class="row">
+							<div class="col-sm-5">
+								<h4>*Senha</h4>
+								<input type="password" name="Password" class="form-control input-lg" placeholder="Senha" required="true">
+							</div>
 						</div>
 					</div>
-					
 					<div class="row">
-						<div class="col-sm-5">
-							<h4>E-mail</h4>
-							<input type="email" class="form-control input-lg" placeholder="E-mail" required="true"> 
-						</div>
-						<div class="col-sm-5">
-							<h4>Confirme seu e-mail</h4>
-							<input type="email" class="form-control input-lg" placeholder="Confirme seu E-mail" required="true">
-						</div>
-					</div>
-					
-					<div class="row">
-						<div class="col-sm-5">
-							<h4>Senha</h4>
-							<input type="password" class="form-control input-lg" placeholder="Senha" required="true">
+						<div class="col-sm-6 col-sm-offset-2">
+							<button type="button" class="btn btn-success btn-lg" style="width:100%">Próximo</button>
 						</div>
 					</div>
 				</div>
 				
-				<div class="form-group" id="form-endereco">
-					<div class="row">
-						<div class="col-sm-8">
-							<h4>Rua</h4>
-							<input type="text" class="form-control input-lg" placeholder="Nome" required="true">
+				<div id="form-endereco" style="display:none">
+					<div class="form-group" >
+						<div class="row">
+							<div class="col-sm-8">
+								<h4>*Rua</h4>
+								<input type="text" class="form-control input-lg" placeholder="Nome" name="Street" required="true">
+							</div>
+							<div class="col-sm-2">
+								<h4>*Número</h4>
+								<input type="number" class="form-control input-lg" min="1" placeholder="Número" name="Number" required="true">
+							</div>
 						</div>
-						<div class="col-sm-2">
-							<h4>Número</h4>
-							<input type="number" class="form-control input-lg" placeholder="Número" required="true">
-						</div>
-					</div>
-					
-					<div class="row">
-						<div class="col-sm-7">
-							<h4>Bairro</h4>
-							<input type="email" class="form-control input-lg" placeholder="Bairro" required="true"> 
-						</div>
-						<div class="col-sm-3">
-							<h4>CEP</h4>
-							<input type="text" maxlength="10" class="form-control input-lg" placeholder="CEP" required="true">
-						</div>
-					</div>
-										
-					<div class="row">
-						<div class="col-sm-5">
-							<h4>Senha</h4>
+						
+						<div class="row">
+							<div class="col-sm-7">
+								<h4>*Bairro</h4>
+								<input type="text" class="form-control input-lg" placeholder="Bairro" name="Neighborhood" required="true"> 
+							</div>
+							<div class="col-sm-3">
+								<h4>*CEP</h4>
+								<input type="text" maxlength="9" class="form-control input-lg" placeholder="CEP" name="CEP" required="true">
+							</div>
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-sm-5">
-							<input type="password" class="form-control input-lg" placeholder="Senha" required="true">
+						<div class="col-sm-6 col-sm-offset-2 btn-group">
+							<button type="button" id="btn-voltar-endereco" class="btn btn-success btn-lg" style="width:50%">Voltar</button>
+							<button type="button" id="btn-endereco" class="btn btn-success btn-lg" style="width:50%">Próximo</button>
 						</div>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-sm-6 col-sm-offset-2">
-						<button type="submit" class="btn btn-success btn-lg" style="width:100%">Próximo</button>
+				
+				<div id="form-voluntario" style="display:none">
+					<div class="form-group" >
+						<div class="row">
+							<div class="col-sm-3 col-sm-offset-5">
+							<h4>Deseja ser voluntário?</h4>
+								<div class="input-group">
+									<div id="radioBtn" class="btn-group">
+										<a class="btn btn-success btn-sm active" data-toggle="Voluntary" data-title="Y">YES</a>
+										<a class="btn btn-success btn-sm notActive" data-toggle="Voluntary" data-title="N">NO</a>
+									</div>
+									<input type="hidden" name="Voluntary" id="Voluntary">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-3 col-sm-offset-5">
+								<h4>Deseja ser guardião?</h4>
+								<div class="input-group">
+									<div id="radioBtn" class="btn-group">
+										<a class="btn btn-success btn-sm active" data-toggle="Guardian" data-title="Y">YES</a>
+										<a class="btn btn-success btn-sm notActive" data-toggle="Guardian" data-title="N">NO</a>
+									</div>
+									<input type="hidden" name="Guardian" id="Guardian">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6 col-sm-offset-2 btn-group">
+							<button type="button" id="btn-voltar-volutario" class="btn btn-success btn-lg" style="width:50%">Voltar</button>
+							<button type="submit" class="btn btn-success btn-lg" style="width:50%">Cadastrar</button>
+						</div>
 					</div>
 				</div>
 			</form>
@@ -133,5 +171,6 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
       <script src="js/bootstrap.min.js"></script>
       <script src="js/main.js"></script>
+	  <script src="js/register.js"></script>
   </body>
 </html>
