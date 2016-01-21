@@ -7,7 +7,7 @@
 
 section {
     padding-top: 25px;
-    padding-bottom: 15px;
+    padding-bottom: 30px;
     
 }
 
@@ -151,15 +151,9 @@ img.grayscale:hover {
 
 .navbar-toggle{z-index: 9999;}
 
-<<<<<<< HEAD
-h2{color:#0F5D18;}
 
-#radioBtn .notActive{
-    color: #3276b1;
-    background-color: #fff;
-}
-=======
 h2{color:#8db698;}
+
 h1{color:#616161;}
 
 
@@ -185,8 +179,6 @@ a:hover{
     color: #8db698;
 }
 
-
-
 .fa{
     color: #8db698;
 }
@@ -203,6 +195,27 @@ a:hover{
     color: #dd4b39;
 }
 
+.div_colorida a:hover{
+    color: #fbfbfb;
+}
 
 
->>>>>>> origin/master
+.div_colorida img:hover{
+     border: 2px solid;
+     border-color: #fbfbfb;
+}
+
+.portfolio-item {
+    margin-bottom: 25px;
+}
+
+
+.portfolio-item a{
+    color:#8db698;
+    
+    font-weight: bold;
+}
+
+
+
+
