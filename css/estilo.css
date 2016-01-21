@@ -151,4 +151,49 @@ img.grayscale:hover {
 
 .navbar-toggle{z-index: 9999;}
 
-h2{color:#0F5D18;}
+h2{color:#8db698;}
+h1{color:#616161;}
+
+
+.btn-default {
+    color: #fbfbfb;
+    background-color: #616161;
+    border-color: #616161;
+}
+
+.btn:hover{
+    color: #fbfbfb;
+    background-color: #8db698;
+    /*CSS 3*/
+    border-color: #8db698;
+    font-weight: bold;
+}
+
+
+
+
+.fa{
+    color: #616161;
+};
+
+
+
+ .fa-facebook-square:before{
+    color: #3b5998 !important;
+};
+
+
+
+.fa-linkedin-square:before{
+    color: #dd4b39 !important;
+};
+
+
+
+.fa-google-plus-square:before{
+    color: #dd4b39 !important;
+};
+
+
+
+
