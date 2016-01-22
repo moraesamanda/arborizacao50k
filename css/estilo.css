@@ -269,9 +269,6 @@ a:hover{
 
 
 
-
-
-
 .box1 h4 {
     position:relative;
     padding:10px 30px;
@@ -281,7 +278,7 @@ a:hover{
     font-weight:bold;
     text-align:center;
     color:#fff;
-    background:#0F5D18;
+    background:#87A800;
     /* css3 extras */
     text-shadow:0 1px 1px rgba(0,0,0,0.2);
     -webkit-box-shadow:0 1px 1px rgba(0,0,0,0.2);
