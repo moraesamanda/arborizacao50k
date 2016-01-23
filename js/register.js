@@ -30,7 +30,7 @@ function required(min, max){
 	var inputs = $("input");
 	for(var i = min; i < max; i++){
 		if(inputs[i].value.length === 0){
-			$("strong").html("Faltam campos a serem preenchidos!");
+			$(".alert strong").html("Faltam campos a serem preenchidos!");
 			$(".alert").fadeIn();
 			return false;
 		}
@@ -43,13 +43,13 @@ function validateEmail() {
 	er = /^[a-zA-Z0-9][a-zA-Z0-9\._-]+@([a-zA-Z0-9\._-]+\.)[a-zA-Z-0-9]{2}/;
 	if(er.exec(email)){
 		if($("input[type='email']:first").val() != $("#email-repeat").val()){
-			$("strong").html("Campos e-mail não estão iguais!");
+			$(".alert strong").html("Campos e-mail não estão iguais!");
 			$(".alert").fadeIn();
 			return false;
 		}
 		return true;
 	} else {
-		$("strong").html("Digite um e-mail válido!");
+		$(".alert strong").html("Digite um e-mail válido!");
 		$(".alert").fadeIn();
 		return false;
 	}
