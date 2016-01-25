@@ -14,84 +14,56 @@
         <link href="css/estilo.css" rel="stylesheet">
         <link href="css/painel.css" rel="stylesheet">
         <link href="css/paineladm.css" rel="stylesheet">
+        <link href="css/timeline.css" rel="stylesheet">
         <link rel="shortcut icon" href="imgs/folha.png">
 
         <!-- MENSAGEM -->
         <link href="css/jquery.toastmessage.css" rel="stylesheet" type="text/css"/>
 
-        <style>
-        .container{
-    margin-top:20px;
-}
-.image-preview-input {
-    position: relative;
-    overflow: hidden;
-    margin: 0px;    
-    color: #333;
-    background-color: #fff;
-    border-color: #ccc;    
-}
-.image-preview-input input[type=file] {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 0;
-    padding: 0;
-    font-size: 20px;
-    cursor: pointer;
-    opacity: 0;
-    filter: alpha(opacity=0);
-}
-.image-preview-input-title {
-    margin-left:2px;
-}
-        </style>
-
     </head>
     <body>
         <!-- Menu da aplicação -->
         <nav class="navbar navbar-default navbar" id="navbar-menu">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu-navegacao" >
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>                
-                <a class="navbar-brand" href="index.html">Arborização 50K</a>
-            </div>  
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu-navegacao" >
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>                
+                    <a class="navbar-brand" href="index.html">Arborização 50K</a>
+                </div>  
             
-            <div class="collapse navbar-collapse menu-navegacao" id="menu-navegacao">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#page-top"></a></li>
-                     <li>
-                        <a class="" href="listapublicacao.html">Publicações</a>
-                    </li>
-                    <li>
-                        <a class="" href="listaplantas.html">Plantas</a>
-                    </li>
-                    <li>
-                        <a class="" href="index.html#calendario">Calendário</a>
-                    </li>
-                    <li>
-                        <a class="" href="listamutirao.html">Mutirões</a>
-                    </li>
-                    <li>
-                        <a class="" href="index.html#contato">Contato</a>
-                    </li>
-                    <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="glyphicon glyphicon-user"></i> <span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Minha Conta</a></li>
-                                <li><a href="#">Trocar Senha</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Efetuar Logoff</a></li>
-                            </ul>
+                <div class="collapse navbar-collapse menu-navegacao" id="menu-navegacao">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#page-top"></a></li>
+                        <li>
+                            <a class="" href="listapublicacao.html">Publicações</a>
                         </li>
-
+                        <li>
+                            <a class="" href="listaplantas.html">Plantas</a>
+                        </li>
+                        <li>
+                            <a class="" href="index.html#calendario">Calendário</a>
+                        </li>
+                        <li>
+                            <a class="" href="listamutirao.html">Mutirões</a>
+                        </li>
+                        <li>
+                            <a class="" href="index.html#contato">Contato</a>
+                        </li>
+                        <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="glyphicon glyphicon-user"></i> <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Minha Conta</a></li>
+                                    <li><a href="#">Trocar Senha</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Efetuar Logoff</a></li>
+                                </ul>
+                        </li>
                     </ul>
                 </div>
-
             </div>
         </nav>     
 
@@ -143,115 +115,125 @@
 
 
                 <div class="col-sm-9" style="margin-bottom:40px">
-
-                    <div class="conteudo_painel">                    
-                        <div class="conteudo_painel_int">                        
-                            <div class="row">
-                                <div class="col-xs-12">
-                                    <div class="page-header"><h1>Babana-gigante </h1> </div>
+<div class="row">
+        <div class="timeline-centered">
+    
+    <article class="timeline-entry">
+        
+        <div class="timeline-entry-inner">
+            <time class="timeline-time" datetime="2014-01-10T03:45"><span>This Month</span> <span>September</span></time>
+            
+            <div class="timeline-icon bg-success">
+                <i class="entypo-feather"></i>
+            </div>
+            
+            <div class="timeline-label">
+                <form>
+                    <div class="row">
+                    <h3>Postar</h3>
+                    <div class="controls controls-row">
+                        <!-- image-preview-filename input [CUT FROM HERE]-->
+                        <div class="input-group image-preview">
+                            <input type="text" placeholder="Foto" class="form-control image-preview-filename" disabled="disabled"> <!-- don't give a name === doesn't send on POST/GET -->
+                            <span class="input-group-btn">
+                                <!-- image-preview-clear button -->
+                                <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
+                                    <span class="glyphicon glyphicon-remove"></span> Limpar
+                                </button>
+                                <!-- image-preview-input -->
+                                <div class="btn btn-default image-preview-input">
+                                    <span class="glyphicon glyphicon-folder-open"></span>
+                                    <span class="image-preview-input-title">Foto</span>
+                                    <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview"/> <!-- rename it -->
                                 </div>
-                                
-                                <div class="row">    
-                                    <div class="col-xs-12 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">  
-                                        <h3>Postar</h3>
-                                        <!-- image-preview-filename input [CUT FROM HERE]-->
-                                        <div class="input-group image-preview">
-                                            <input type="text" placeholder="Foto" class="form-control image-preview-filename" disabled="disabled"> <!-- don't give a name === doesn't send on POST/GET -->
-                                            <span class="input-group-btn">
-                                                <!-- image-preview-clear button -->
-                                                <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
-                                                    <span class="glyphicon glyphicon-remove"></span> Limpar
-                                                </button>
-                                                <!-- image-preview-input -->
-                                                <div class="btn btn-default image-preview-input">
-                                                    <span class="glyphicon glyphicon-folder-open"></span>
-                                                    <span class="image-preview-input-title">Foto</span>
-                                                    <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview"/> <!-- rename it -->
-                                                </div>
-                                            </span>
-                                        </div><!-- /input-group image-preview [TO HERE]--> 
-                                    </div>
-                                </div>
-                                
-                                <div class="row" style="margin-top: 10px;">    
-                                    <div class="col-xs-12 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">  
-                                        <textarea rows="3" class="form-control input-lg" placeholder="Descrição"></textarea>
-                                    </div>
-                                </div>
-                                <div class="row" style="margin-top: 10px; margin-bottom:10px;">    
-                                    <div class="col-xs-12 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">  
-                                       <button type="button" class="btn btn-primary pull-right" >
-                                            <span class="glyphicon glyphicon-upload"></span> Publicar
-                                        </button>
-                                    </div>
-                                </div>
-                            <div class="row">
-                                <div class="col-lg-12">
-                                     <div class="col-sm-offset-3 col-sm-6" >
-                                        <h4>Excelente projeto da da Secretaria de Meio Ambiente de Sorocaba</h4>
-                                        <a class="fa fa-facebook-square fa-2x" href="#" role="button"></a>
-                                        <a class="fa fa-linkedin-square fa-2x" href="#" role="button"></a>
-                                        <a class="fa fa-google-plus-square fa-2x" href="#" role="button"></a>
-                                        
-                                        <div class="pull-right">
-                                            <div class="row">
-                                              <small> 20/02/2016</small>
-                                            </div>
-                                            <div class="row">
-                                              <button class="btn btn-success">Aprovar</button>
-                                            </div>
-                                         </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="col-sm-offset-6 col-sm-6" >
-                                        <div style="width: 2px; height:100px; background-color:green;"></div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                     <div class="col-sm-offset-3 col-sm-6" >
-                                        <h4>E ela continua crescendo!</h4>
-                                        <img src="imgs/foto3.jpg" class="img-responsive"/>
-                                        <a class="fa fa-facebook-square fa-2x" href="#" role="button"></a>
-                                        <a class="fa fa-linkedin-square fa-2x" href="#" role="button"></a>
-                                        <a class="fa fa-google-plus-square fa-2x" href="#" role="button"></a>
-                                        <div class="pull-right">
-                                        <div class="row">
-                                            <small> 20/02/2016</small>
-                                            </div>
-                                            <div class="row">
-                                              <button class="btn btn-success">Aprovar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="col-sm-offset-6 col-sm-6" >
-                                        <div style="width: 2px; height:100px; background-color:green;"></div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                     <div class="col-sm-offset-3 col-sm-6" >
-                                        <h4>Primeira foto da minha árvore!</h4>
-                                        <img src="imgs/foto3.jpg" class="img-responsive"/>
-                                        <a class="fa fa-facebook-square fa-2x" href="#" role="button"></a>
-                                        <a class="fa fa-linkedin-square fa-2x" href="#" role="button"></a>
-                                        <a class="fa fa-google-plus-square fa-2x" href="#" role="button"></a>
-                                        <div class="pull-right">
-                                        <div class="row">
-                                            <small> 20/01/2016</small>
-                                            </div>
-                                            <div class="row">
-                                              <button class="btn btn-success">Aprovar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                            </span>
+                        </div><!-- /input-group image-preview [TO HERE]--> 
                     </div>
+                    <div class="controls">
+                        <textarea id="message" name="message" class="form-control" placeholder="Your Message" rows="5"></textarea>
+                    </div>
+                      
+                    <div class="controls" style="margin-top:5px;">
+                        <button id="contact-submit" type="submit" class="btn btn-primary input-medium pull-right">Publicar</button>
+                    </div>
+                </div>  
+                </form>
+            </div>
+        </div>
+        
+    </article>
+    
+    
+    <article class="timeline-entry left-aligned">
+        
+        <div class="timeline-entry-inner">
+            <time class="timeline-time" datetime="2014-01-10T03:45"><span>10:00 AM</span> <span>16/01/2016</span></time>
+            
+            <div class="timeline-icon bg-secondary">
+                <i class="entypo-suitcase"></i>
+            </div>
+            
+            <div class="timeline-label">
+                <h3>Excelente projeto da Secretaria do Meio Ambiente de Sorocaba</h3>
+            </div>
+        </div>
+        
+    </article>
+    
+    
+    <article class="timeline-entry">
+        
+        <div class="timeline-entry-inner">
+            <time class="timeline-time" datetime="2014-01-09T13:22"><span>03:45 PM</span> <span>25/01/2016</span></time>
+            
+            <div class="timeline-icon bg-info">
+                <i class="entypo-location"></i>
+            </div>
+            
+            <div class="timeline-label">
+                <h2>Minha árvore está crescendo!</h2>
+                
+                <div><img src="imgs/foto3.jpg" class="img-responsive"/></div>
+            </div>
+        </div>
+        
+    </article>
+    
+    
+    <article class="timeline-entry left-aligned">
+        
+        <div class="timeline-entry-inner">
+            <time class="timeline-time" datetime="2014-01-10T03:45"><span>20:00 AM</span> <span>Hoje</span></time>
+            
+            <div class="timeline-icon bg-warning">
+                <i class="entypo-camera"></i>
+            </div>
+            
+            <div class="timeline-label">
+                <h2>Primeira fota da minha árvore!</h2>
+                
+                <div><img src="imgs/foto3.jpg" class="img-responsive"/></div>
+            </div>
+        </div>
+        
+    </article>
+    
+    
+    <article class="timeline-entry begin">
+    
+        <div class="timeline-entry-inner">
+            
+            <div class="timeline-icon" style="-webkit-transform: rotate(-90deg); -moz-transform: rotate(-90deg);">
+                <i class="entypo-flight"></i>
+            </div>
+            
+        </div>
+        
+    </article>
+    
+</div>
+    </div>
                 </div>
-
             </div>
         </div>
 
