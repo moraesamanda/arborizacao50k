@@ -142,7 +142,7 @@
                             <h4 class="panel-title">
                                 
                                 <a href="paineladmmutirao.html">
-                                    <span class="glyphicon glyphicon-leaf"></span>
+                                    <span class="glyphicon glyphicon-tree-deciduous"></span>
                                     Gerenciar Mutirões </a>
                                     
                                 </a>
@@ -161,8 +161,8 @@
                         <div class="conteudo_painel_int">                        
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <div class="page-header"><h1>Plantas 
-                                            <a href="#modalPlanta" role="button" class="btn btn-mini btn-success required-inserir" 
+                                    <div class="page-header"><h1>Mutirões 
+                                            <a href="#modalMutirao" role="button" class="btn btn-mini btn-success required-inserir" 
                                                data-toggle="modal"><i class="glyphicon glyphicon-plus"></i></a></h1> 
                                     </div>
                                 </div>
@@ -172,36 +172,30 @@
                                     <table class="table tablesorter table-striped sortable table-hover">
                                         <thead>
                                             <tr>
-                                                <th class="header">Popular</th>
-                                                <th class="header">Científico</th>
-                                                <th class="header">Curiosidades</th>                                    
-                                                <th class="header" id="td-acoes" width="50px;">Ações</th>
+                                                <th class="header">Mutirão</th>
+                                                <th class="header">Data</th>
+                                                <th class="header">Hora</th>  
+                                                <th class="header">Endereço</th>                                  
+                                                <th class="header" id="td-acoes" width="90px;">Ações</th>
                                             </tr>
                                         </thead>
                                         <tbody>
 
                                             <tr>
-                                                <td>Banana-gigante</td>
-                                                <td>Musa ingens</td>
-                                                <td>XXXXXXXXXXXXXXXXXXXXXXXXX</td>                               
+                                                <td>Mutirão A </td>
+                                                <td>02/02/2016</td>
+                                                <td>15:00</td>
+                                                <td>Pq. das Águas</td>                               
                                                 <td>
 
-                                                    <button type="button" class="btn btn-primary btn-sm required-editar" onclick="alterar();">
+                                                    <button type="button" class="btn btn-primary btn-sm required-editar" onclick="alterarMutirao();">
                                                         <span class="glyphicon glyphicon-edit "></span></button>
                                                     <button type="button" class="btn btn-danger btn-sm required-excluir" onclick="MessageDelete();"><span class="glyphicon glyphicon-trash"></span></button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Teste planta</td>
-                                                <td>Teste planta</td>
-                                                <td>XXXXXXXXXXXXXXXXXXXXXXXXX</td> 
-                                                <td>
+                                                    <button type="button" class="btn  required-face"><i class="fa fa-facebook"></i></button>
+                                                   
 
-                                                    <button type="button" class="btn btn-primary btn-sm required-editar" onclick="alterar();">
-                                                        <span class="glyphicon glyphicon-edit "></span></button>
-                                                    <button type="button" class="btn btn-danger btn-sm required-excluir" onclick="MessageDelete();"><span class="glyphicon glyphicon-trash"></span></button>
                                                 </td>
-                                            </tr>
+                                            
 
                                         </tbody>
                                     </table>                
@@ -226,54 +220,72 @@
 
 
 
-        <div class="modal fade" id="modalPlanta" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal fade" id="modalMutirao" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Planta</h4>
+                        <h4 class="modal-title" id="myModalLabel">Mutirão</h4>
                     </div>
                     <div class="modal-body">
-                        <div class="span4">
-                            <label for="model_CorporateName">Nome popular:</label>
+
+                    <div class="span4">
+                            <label for="model_CorporateName">Mutirão:</label>
                             <div class="required-field-block"> 
-                                <input id="" placeholder="Nome Popular" type="text"  class="form-control " aria-controls="DataTables_Table_0" required>                          
+                                <input id="" placeholder="Nome do mutirão" type="text"  class="form-control " aria-controls="DataTables_Table_0" required>                          
                             </div>
                         </div>
 
 
-                        <div class="span4">
-                            <label for="model_CorporateName">Nome científico:</label>
-                            <div class="required-field-block"> 
-                                <input id="" placeholder="Nome Científico" type="text" class="form-control " aria-controls="DataTables_Table_0" required>                          
-                            </div>
-                        </div>
-
-                        <div  class="span5" > 
-                            <label>Imagem (árvore adulta)</label>
-                            <input type="hidden" id="hdfileSetup" name="hdFile" value=""  /> 
-                            <input id='fileUploadSetup' name="file" type="file" onchange="" accept="image/*" class="btn btn-primary"   >
-                        </div>
 
                         <div class="span4">
-                            <label for="model_CorporateName">Ecologia:</label>
+                            <label for="model_CorporateName">Data:</label>
                             <div class="required-field-block"> 
-                                <input id="" placeholder="Ecologia" type="text" class="form-control " aria-controls="DataTables_Table_0" required>                          
+                                <input id=""  type="date"  class="form-control " aria-controls="DataTables_Table_0" required>                          
                             </div>
                         </div>
 
-                        <div  class="span5" > 
-                            <label>Ilustrativo da Altura</label>
-                            <input type="hidden" id="hdfileSetup" name="hdFile" value=""  /> 
-                            <input id='fileUploadSetup' name="file" type="file" onchange="" accept="image/*" class="btn btn-primary"   >
-                        </div>
 
-                        <div class="span12">
-                            <label  for="textarea">Curiosidades</label>
-                            <div>                     
-                                <textarea style="width: 550px; height: 200px; " id="textarea" name="textarea"></textarea>
+                        <div class="span4">
+                            <label for="model_CorporateName">Hora:</label>
+                            <div class="required-field-block"> 
+                                <input id=""  type="Time" class="form-control " aria-controls="DataTables_Table_0" required>                          
                             </div>
                         </div>
+
+                        <div class="span4">
+                            <label for="model_CorporateName">Endereço:</label>
+                            <div class="required-field-block"> 
+                                <input id="" placeholder="Endereço" type="text"  class="form-control " aria-controls="DataTables_Table_0" required>                          
+                            </div>
+                        </div>
+
+                         <div class="span4">
+                            <label for="model_CorporateName">Número:</label>
+                            <div class="required-field-block"> 
+                                <input id=""  type="number"  class="form-control " aria-controls="DataTables_Table_0" required>                          
+                            </div>
+                        </div>
+
+                        <div class="span4">
+                            <label for="model_CorporateName">Bairro:</label>
+                            <div class="required-field-block"> 
+                                <input id="" placeholder="Bairro" type="text"  class="form-control " aria-controls="DataTables_Table_0" required>                          
+                            </div>
+                        </div>
+
+                        <div class="span4">
+                            <label for="model_CorporateName">Número de voluntários:</label>
+                            <div class="required-field-block"> 
+                                <input id=""  type="number"  class="form-control " aria-controls="DataTables_Table_0" required>                          
+                            </div>
+                        </div>
+
+                         <label class="checkbox-inline" for="checkboxes-3">
+					      	<input type="checkbox" name="checkboxes" id="checkboxes-3" value="true">
+					      Enviar notificação por e-mail
+					    </label>
+                         
 
                     </div>
 

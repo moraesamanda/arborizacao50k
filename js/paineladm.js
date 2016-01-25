@@ -19,6 +19,14 @@ title: 'Excluir'
 });
 })
 
+$(function() {
+$('.required-face').tooltip({
+placement: 'rigth',
+title: 'Compartilhar Facebook'
+});
+})
+
+
 function showMessageToast(message, temp) {
 $().toastmessage('showToast', {
 text: "" + message + "",
@@ -47,6 +55,10 @@ function alterarUsuario(){$("#modalUsuario").modal('show');}
 function alterarPerfil(){$("#modalPerfil").modal('show');}
 
 function alterarPerfilUser(){$("#modalPerfilUser").modal('show');}
+
+function alterarMutirao(){$("#modalMutirao").modal('show');}
+
+
 
 
 
