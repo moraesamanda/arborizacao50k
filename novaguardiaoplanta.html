@@ -152,12 +152,87 @@
                     </div>
                 </div>
 
+                <div class="row">
+                    <div class="col-xs-8 col-sm-offset-3">
+                        <h4>Plantio será no enderço do usuário?</h4>
+                        <div class="input-group">
+                            <div id="radioBtn" class="btn-group">
+                                <a class="btn btn-success btn-sm active" data-toggle="endereco" data-title="Y">YES</a>
+                                <a class="btn btn-success btn-sm notActive" data-toggle="endereco" data-title="N">NO</a>
+                            </div>
+                            <input type="hidden" name="endereco" id="radio-end">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" id="endereco-plantio" style="display:none">
+                    <div class="form-group col-xs-8 col-sm-offset-3" >
+                        <h3 class="text-center">Endereço do Plantio</h3>
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <h4>*Rua</h4>
+                                <input type="text" class="form-control input-lg" placeholder="Nome" name="Street" required="true">
+                            </div>
+                            <div class="col-sm-4">
+                                <h4>*Número</h4>
+                                <input type="number" class="form-control input-lg" min="1" placeholder="Número" name="Number" required="true">
+                            </div>
+                        </div>        
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <h4>*Bairro</h4>
+                                <input type="text" class="form-control input-lg" placeholder="Bairro" name="Neighborhood" required="true"> 
+                            </div>
+                            <div class="col-sm-4">
+                                <h4>*CEP</h4>
+                                <input type="text" maxlength="9" class="form-control input-lg" placeholder="CEP" name="CEP" required="true">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h4>*Bairro</h4>
+                                <input type="text" class="form-control input-lg" placeholder="Bairro" name="Neighborhood" required="true"> 
+                            </div>
+                            <div class="col-sm-4">
+                                <h4>*CEP</h4>
+                                <input type="text" maxlength="9" class="form-control input-lg" placeholder="CEP" name="CEP" required="true">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h4>*Motivo</h4>
+                                <textarea cols="10" rows="5" class="form-control input-lg" placeholder="Motivo" maxlength="254" name="motico" required="true"> </textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="row" style="margin:10px;">
                     <div class="col-xs-8 col-sm-offset-3 text-center">
                         <button class="btn btn-success" type="button" onclick="escolherarvore();">Escolher Árvore</button>
                     </div>
                 </div>
                 
+        <div class="modal fade" id="modalPerfil" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Planta</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="span4">
+                            <label id="planta-ind"></label> <label> é a melhor planta para você!</label>
+                        </div>                        
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" onclick="messagemreserva();">Reservar</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- TABELA -->   
         <script src="js/jquery-min.js" type="text/javascript"></script>

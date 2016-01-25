@@ -147,24 +147,49 @@ $(function () {
 });
 
 function escolherarvore(){
-    var arvore = $("input[name='arvore'");
-    var local = $("input[name='local'");
+    var arvore = $("input[name='arvore']");
+    var local = $("input[name='local']").is(":checked");
 
     var check_arvore;
-    var check_local;
 
     for(var i = 0; i < arvore.length; i++){
         if($(arvore[i]).is(':checked')){
             var text_arvore = $(".arvore");
-            check_arvore = text_arvore[i].innerHTML;
-
+            var text = text_arvore[i].innerHTML;
+            check_arvore = text.substring(58, parseInt(text.indexOf("input") - 1));
         }
     }
 
-    check_local = local.each(function(){
-        if($(this).is(':checked'))
-            return true;
-    });
+    if(!!check_arvore && local){
+        $("#modalPerfil").modal("show");
+        $("#planta-ind").html(check_arvore);
+    } else if(!local){
+        showMessageToast("Selecione a localização do plantio!", 3000);
+    } else {
+        showMessageToast("Selecione pelo menos uma planta!", 3000);
+    }
 
+}
 
+$('#radioBtn a').on('click', function(){
+    var sel = $(this).data('title');
+    var tog = $(this).data('toggle');
+    $('#'+tog).prop('value', sel);
+    
+    $('a[data-toggle="'+tog+'"]').not('[data-title="'+sel+'"]').removeClass('active').addClass('notActive');
+    $('a[data-toggle="'+tog+'"][data-title="'+sel+'"]').removeClass('notActive').addClass('active');
+
+    if(sel == 'N'){
+            $("#endereco-plantio").fadeIn();
+        } else {
+            $("#endereco-plantio").fadeOut();
+        }
+})
+
+function messagemreserva(){
+    showMessageToast("Reserva feita com sucesso!", 3000);
+    setTimeout(function(){
+        window.location.href="guardiaoplantas.html"
+    }, 3000);
+    
 }
