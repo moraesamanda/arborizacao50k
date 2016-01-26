@@ -17,44 +17,51 @@
         <link href="css/timeline.css" rel="stylesheet">
         <link rel="shortcut icon" href="imgs/folha.png">
 
+        <!-- TABELA -->
+        <link href="css/table-sorter.css" rel="stylesheet" type="text/css"/>
+        <link href="css/tablesorter.pager.css" rel="stylesheet" type="text/css"/>
+        <link href="css/dataTables.bootstrap.css" rel="stylesheet" type="text/css"/> 
+
         <!-- MENSAGEM -->
         <link href="css/jquery.toastmessage.css" rel="stylesheet" type="text/css"/>
+
 
     </head>
     <body>
         <!-- Menu da aplicação -->
         <nav class="navbar navbar-default navbar" id="navbar-menu">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu-navegacao" >
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>                
-                    <a class="navbar-brand" href="index.html">Arborização 50K</a>
-                </div>  
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu-navegacao" >
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>                
+                <a class="navbar-brand" href="index.html">Arborização 50K</a>
+            </div>  
             
-                <div class="collapse navbar-collapse menu-navegacao" id="menu-navegacao">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#page-top"></a></li>
-                        <li>
-                            <a class="" href="listapublicacao.html">Publicações</a>
-                        </li>
-                        <li>
-                            <a class="" href="listaplantas.html">Plantas</a>
-                        </li>
-                        <li>
-                            <a class="" href="index.html#calendario">Calendário</a>
-                        </li>
-                        <li>
-                            <a class="" href="listamutirao.html">Mutirões</a>
-                        </li>
-                        <li>
-                            <a class="" href="index.html#contato">Contato</a>
-                        </li>
-                       
+            <div class="collapse navbar-collapse menu-navegacao" id="menu-navegacao">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#page-top"></a></li>
+ <li>
+                        <a class="" href="listapublicacao.html">Publicações</a>
+                    </li>
+                    <li>
+                        <a class="" href="listaplantas.html">Plantas</a>
+                    </li>
+                    <li>
+                        <a class="" href="index.html#calendario">Calendário</a>
+                    </li>
+                    <li>
+                        <a class="" href="listamutirao.html">Mutirões</a>
+                    </li>
+                    <li>
+                        <a class="" href="index.html#contato">Contato</a>
+                    </li>
+                   
                     </ul>
                 </div>
+
             </div>
         </nav>     
 
@@ -69,7 +76,7 @@
                                 
                                 <a href="guardiaoplantas.html">
                                     <span class="glyphicon glyphicon-leaf"></span>
-                                    Minhas Plantas  <span class="badge autorizar">3</span></a> </a>
+                                    Minhas Plantas <span class="badge autorizar">3</span></a> 
                             </h4>
                         </div>                        
                     </div>
@@ -101,40 +108,29 @@
 
 
 
+
                 <div class="col-sm-9" style="margin-bottom:40px">
 <div class="row">
         <div class="timeline-centered">
     
-    <article class="timeline-entry">
+    
+    <article class="timeline-entry left-aligned">
         
         <div class="timeline-entry-inner">
             <time class="timeline-time" datetime="2014-01-10T03:45"><span></span> <span></span></time>
             
-            <div class="timeline-icon bg-success">
-                <i class="entypo-feather"></i>
+            <div class="timeline-icon bg-secondary">
+                <i class="entypo-suitcase"></i>
             </div>
             
             <div class="timeline-label">
                 <form>
                     <div class="row">
-                    <h3>Postar</h3>
+                    <h3>Problema com Banana-Gigante</h3>
                     <div class="controls controls-row">
                         <!-- image-preview-filename input [CUT FROM HERE]-->
-                        <div class="input-group image-preview">
-                            <input type="text" placeholder="Foto" class="form-control image-preview-filename" disabled="disabled"> <!-- don't give a name === doesn't send on POST/GET -->
-                            <span class="input-group-btn">
-                                <!-- image-preview-clear button -->
-                                <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
-                                    <span class="glyphicon glyphicon-remove"></span> Limpar
-                                </button>
-                                <!-- image-preview-input -->
-                                <div class="btn btn-default image-preview-input">
-                                    <span class="glyphicon glyphicon-folder-open"></span>
-                                    <span class="image-preview-input-title">Foto</span>
-                                    <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview"/> <!-- rename it -->
-                                </div>
-                            </span>
-                        </div><!-- /input-group image-preview [TO HERE]--> 
+                        <div class="controls">
+                            <input type="text" placeholder="Título" class="form-control "> 
                     </div>
                     <div class="controls">
                         <textarea id="message" name="message" class="form-control" placeholder="Descrição" rows="5"></textarea>
@@ -151,26 +147,6 @@
     </article>
     
     
-    <article class="timeline-entry left-aligned">
-        
-        <div class="timeline-entry-inner">
-            <time class="timeline-time" datetime="2014-01-10T03:45"><span>22:00</span> <span>Hoje</span></time>
-            
-            <div class="timeline-icon bg-secondary">
-                <i class="entypo-suitcase"></i>
-            </div>
-            
-            <div class="timeline-label">
-                <a class="fa fa-facebook-square fa-2x" href="#" role="button"></a>
-                <a class="fa fa-linkedin-square fa-2x" href="#" role="button"></a>
-                <a class="fa fa-google-plus-square fa-2x" href="#" role="button"></a>    
-                <h3>Excelente projeto da Secretaria do Meio Ambiente de Sorocaba</h3>
-            </div>
-        </div>
-        
-    </article>
-    
-    
     <article class="timeline-entry">
         
         <div class="timeline-entry-inner">
@@ -181,12 +157,9 @@
             </div>
             
             <div class="timeline-label">
-                <a class="fa fa-facebook-square fa-2x" href="#" role="button"></a>
-                <a class="fa fa-linkedin-square fa-2x" href="#" role="button"></a>
-                <a class="fa fa-google-plus-square fa-2x" href="#" role="button"></a>
-                <h2>Minha árvore está crescendo!</h2>
+                 <h2>Resposta</h2>
                 
-                <div><img src="imgs/foto3.jpg" class="img-responsive"/></div>
+                <h4>O senhor pode fazer uma denúncia ao IBAMA</h4>
             </div>
         </div>
         
@@ -203,12 +176,9 @@
             </div>
             
             <div class="timeline-label">
-                <a class="fa fa-facebook-square fa-2x" href="#" role="button"></a>
-                <a class="fa fa-linkedin-square fa-2x" href="#" role="button"></a>
-                <a class="fa fa-google-plus-square fa-2x" href="#" role="button"></a>
-                <h2>Primeira fota da minha árvore!</h2>
+                <h2>Árvore danificada</h2>
                 
-                <div><img src="imgs/foto3.jpg" class="img-responsive"/></div>
+                <h4>Alguém está danificando minha árvore de noite. O que devo fazer?</h4>
             </div>
         </div>
         

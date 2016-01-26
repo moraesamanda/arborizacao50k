@@ -57,16 +57,6 @@
                         <li>
                             <a class="" href="#contato">Contato</a>
                         </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="glyphicon glyphicon-user"></i> <span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Minha Conta</a></li>
-                                <li><a href="#">Trocar Senha</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Efetuar Logoff</a></li>
-                            </ul>
-                        </li>
-
                     </ul>
                 </div>
 
@@ -84,9 +74,7 @@
                                 
                                 <a href="guardiaoplantas.html">
                                     <span class="glyphicon glyphicon-leaf"></span>
-                                    Minhas Plantas  </a>
-                                    
-                                </a>
+                                    Minhas Plantas  <span class="badge autorizar">3</span></a> </a>
                             </h4>
                         </div>                        
                     </div>
@@ -100,18 +88,16 @@
                                 
                                 <span class="glyphicon glyphicon-user"></span>
                                 
-                                Gerenciar Usuários
+                                Minha Conta
                             </a>
                         </h4>
                     </div>
                     <div role="tabpanel" class="panel-collapse collapse" id="colListGroup2" aria-expanded="false">
                         <ul class="list-group">
-                            <li class="list-group-item"><a href="paineladmuser.html">Novo usuário</a></li>
-                                <li class="list-group-item"><a href="paineladmperfil.html">Novo perfil</a></li>
-                                <li class="list-group-item"><a href="paineladmperfilpag.html">Perfil e página</a></li>
-                                <li class="list-group-item"><a href="paineladmperfiluser.html">Perfil e usuário</a></li>
+                            <li class="list-group-item"><a href="paineluser.html">Configurações</a></li>
+                                <li class="list-group-item"><a href="trocasenha.html">Trocar Senha</a></li>
+                                <li class="list-group-item"><a href="index.html">Logoff</a></li>
                         </ul>
-                        <div class="panel-footer"></div>
                     </div>
                 </div>
 
@@ -128,54 +114,38 @@
                         <div class="conteudo_painel_int">                        
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <div class="page-header"><h1>Perfil
-                                            <a href="#modalPerfil" role="button" class="btn btn-mini btn-success required-inserir" 
-                                               data-toggle="modal"><i class="glyphicon glyphicon-plus"></i></a></h1> 
-                                    </div>
+                                    <div class="page-header"><h1>Configurações</div>
                                 </div>
                             </div>
                             <div class="row">
+                                <div class="col-lg-7">
+                                   <h3><small>Nome: </small>José </h3>
+                               </div>
+                               <div class="col-lg-5">
+                                   <h3><small>Sobrenome: </small>Maria</h3>
+                               </div>                                
+                            </div>
+                            <div class="row">
                                 <div class="col-lg-12">
-                                    <table class="table tablesorter table-striped sortable table-hover">
-                                        <thead>
-                                            <tr>
-                                                <th class="header">Perfil</th>                                                 
-                                                <th class="header" id="td-acoes"  width="50px;">Ações</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
+                                   <h3><small>E-mail: </small>josemaria@empreende.com </h3>
+                               </div>                
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-7">
+                                   <h3><small>Endereço: </small>Avenida das Pitayas </h3>
+                               </div>
+                               <div class="col-lg-5">
+                                   <h3><small>Número: </small> 102</h3>
+                               </div>                                
+                            </div>
 
-                                            <tr>
-                                                <td>Administrador 1</td>          
-                                                <td>
-
-                                                    <button type="button" class="btn btn-primary btn-sm required-editar" onclick="alterarPerfil();">
-                                                        <span class="glyphicon glyphicon-edit "></span></button>
-                                                    <button type="button" class="btn btn-danger btn-sm required-excluir" onclick="MessageDelete();"><span class="glyphicon glyphicon-trash"></span></button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Administrador 2</td>                                                
-                                                <td>
-
-                                                    <button type="button" class="btn btn-primary btn-sm required-editar" onclick="alterarPerfil();">
-                                                        <span class="glyphicon glyphicon-edit "></span></button>
-                                                    <button type="button" class="btn btn-danger btn-sm required-excluir" onclick="MessageDelete();"><span class="glyphicon glyphicon-trash"></span></button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Administrador 3</td>                                                
-                                                <td>
-
-                                                    <button type="button" class="btn btn-primary btn-sm required-editar" onclick="alterarPerfil();">
-                                                        <span class="glyphicon glyphicon-edit "></span></button>
-                                                    <button type="button" class="btn btn-danger btn-sm required-excluir" onclick="MessageDelete();"><span class="glyphicon glyphicon-trash"></span></button>
-                                                </td>
-                                            </tr>
-
-                                        </tbody>
-                                    </table>                
-                                </div>
+                             <div class="row">
+                                <div class="col-lg-7">
+                                   <h3><small>Bairro: </small>Aldeia de Sorocaba </h3>
+                               </div>
+                               <div class="col-lg-5">
+                                   <h3><small>CEP: </small> 18050-504</h3>
+                               </div>                                
                             </div>
                         </div>
                     </div>

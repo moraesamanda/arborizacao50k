@@ -20,6 +20,13 @@ title: 'Excluir'
 })
 
 $(function() {
+$('.required-problema').tooltip({
+placement: 'rigth',
+title: 'Problema'
+});
+})
+
+$(function() {
 $('.required-face').tooltip({
 placement: 'rigth',
 title: 'Compartilhar Facebook'
