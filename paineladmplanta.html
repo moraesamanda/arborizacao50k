@@ -13,6 +13,7 @@
         <link href="css/painel.css" rel="stylesheet">
         <link href="css/paineladm.css" rel="stylesheet">
         <link rel="shortcut icon" href="imgs/folha.png">
+        <link href="css/timeline.css" rel="stylesheet">
 
         <!-- TABELA -->
         <link href="css/table-sorter.css" rel="stylesheet" type="text/css"/>
@@ -260,11 +261,27 @@
                             </div>
                         </div>
 
-                        <div  class="span5" > 
-                            <label>Imagem (árvore adulta)</label>
-                            <input type="hidden" id="hdfileSetup" name="hdFile" value=""  /> 
-                            <input id='fileUploadSetup' name="file" type="file" onchange="" accept="image/*" class="btn btn-primary"   >
-                        </div>
+
+                        <!-- image-preview-filename input [CUT FROM HERE]-->
+                        <label>Imagem (árvore adulta)</label>
+                        <div class="input-group image-preview">                            
+                            <input type="text" placeholder="Imagem (árvore adulta)" class="form-control image-preview-filename" disabled="disabled"> <!-- don't give a name === doesn't send on POST/GET -->
+                            <span class="input-group-btn">
+                                <!-- image-preview-clear button -->
+                                <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
+                                    <span class="glyphicon glyphicon-remove"></span> Limpar
+                                </button>
+                                <!-- image-preview-input -->
+                                <div class="btn btn-default image-preview-input">
+                                    <span class="glyphicon glyphicon-folder-open"></span>
+                                    <span class="image-preview-input-title">Foto</span>
+                                    <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview"/> <!-- rename it -->
+                                </div>
+                            </span>
+                        </div><!-- /input-group image-preview [TO HERE]--> 
+
+
+                        
 
                         <div class="span4">
                             <label for="model_CorporateName">Ecologia:</label>
@@ -273,11 +290,27 @@
                             </div>
                         </div>
 
-                        <div  class="span5" > 
-                            <label>Ilustrativo da Altura</label>
-                            <input type="hidden" id="hdfileSetup" name="hdFile" value=""  /> 
-                            <input id='fileUploadSetup' name="file" type="file" onchange="" accept="image/*" class="btn btn-primary"   >
-                        </div>
+                        
+
+                        <!-- image-preview-filename input [CUT FROM HERE]-->
+                        <label>Ilustrativo da Altura</label>
+                        <div class="input-group image-preview1">                            
+                            <input type="text" placeholder="Imagem (árvore adulta)" class="form-control image-preview-filename1" disabled="disabled"> <!-- don't give a name === doesn't send on POST/GET -->
+                            <span class="input-group-btn">
+                                <!-- image-preview-clear button -->
+                                <button type="button" class="btn btn-default image-preview-clear1" style="display:none;">
+                                    <span class="glyphicon glyphicon-remove"></span> Limpar
+                                </button>
+                                <!-- image-preview-input -->
+                                <div class="btn btn-default image-preview-input1">
+                                    <span class="glyphicon glyphicon-folder-open"></span>
+                                    <span class="image-preview-input-title1">Foto</span>
+                                    <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview1"/> <!-- rename it -->
+                                </div>
+                            </span>
+                        </div><!-- /input-group image-preview [TO HERE]--> 
+
+
 
                         <div class="span12">
                             <label  for="textarea">Curiosidades</label>
@@ -310,5 +343,129 @@
 
         <!-- MENSAGEM -->
         <script src="js/jquery.toastmessage.js" type="text/javascript"></script>
+
+        <script>
+        $(document).on('click', '#close-preview', function(){ 
+            $('.image-preview').popover('hide');
+            // Hover befor close the preview
+            $('.image-preview').hover(
+                function () {
+                   $('.image-preview').popover('show');
+                }, 
+                 function () {
+                   $('.image-preview').popover('hide');
+                }
+            );    
+        });
+
+        $(function() {
+            // Create the close button
+            var closebtn = $('<button/>', {
+                type:"button",
+                text: 'x',
+                id: 'close-preview',
+                style: 'font-size: initial;',
+            });
+            closebtn.attr("class","close pull-right");
+            // Set the popover default content
+            $('.image-preview').popover({
+                trigger:'manual',
+                html:true,
+                title: "<strong>Preview</strong>"+$(closebtn)[0].outerHTML,
+                content: "There's no image",
+                placement:'bottom'
+            });
+
+            // Clear event
+            $('.image-preview-clear').click(function(){
+                $('.image-preview').attr("data-content","").popover('hide');
+                $('.image-preview-filename').val("");
+                $('.image-preview-clear').hide();
+                $('.image-preview-input input:file').val("");
+                $(".image-preview-input-title").text("Foto"); 
+            }); 
+            // Create the preview image
+            $(".image-preview-input input:file").change(function (){     
+                var img = $('<img/>', {
+                    id: 'dynamic',
+                    width:250,
+                    height:200
+                });      
+                var file = this.files[0];
+                var reader = new FileReader();
+                // Set preview image into the popover data-content
+                reader.onload = function (e) {
+                    $(".image-preview-input-title").text("Alterar");
+                    $(".image-preview-clear").show();
+                    $(".image-preview-filename").val(file.name);            
+                    img.attr('src', e.target.result);
+                    $(".image-preview").attr("data-content",$(img)[0].outerHTML).popover("show");
+                }        
+                reader.readAsDataURL(file);
+            });  
+        });
+        </script>
+
+        <script>
+        $(document).on('click', '#close-preview', function(){ 
+            $('.image-preview1').popover('hide');
+            // Hover befor close the preview
+            $('.image-preview1').hover(
+                function () {
+                   $('.image-preview1').popover('show');
+                }, 
+                 function () {
+                   $('.image-preview1').popover('hide');
+                }
+            );    
+        });
+
+        $(function() {
+            // Create the close button
+            var closebtn = $('<button/>', {
+                type:"button",
+                text: 'x',
+                id: 'close-preview',
+                style: 'font-size: initial;',
+            });
+            closebtn.attr("class","close pull-right");
+            // Set the popover default content
+            $('.image-preview1').popover({
+                trigger:'manual',
+                html:true,
+                title: "<strong>Preview</strong>"+$(closebtn)[0].outerHTML,
+                content: "There's no image",
+                placement:'bottom'
+            });
+            
+            // Clear event
+            $('.image-preview-clear1').click(function(){
+                $('.image-preview1').attr("data-content","").popover('hide');
+                $('.image-preview-filename1').val("");
+                $('.image-preview-clear1').hide();
+                $('.image-preview-input1 input:file').val("");
+                $(".image-preview-input-title1").text("Foto"); 
+            }); 
+            // Create the preview image
+            $(".image-preview-input1 input:file").change(function (){     
+                var img = $('<img/>', {
+                    id: 'dynamic',
+                    width:250,
+                    height:200
+                });      
+                var file = this.files[0];
+                var reader = new FileReader();
+                // Set preview image into the popover data-content
+                reader.onload = function (e) {
+                    $(".image-preview-input-title1").text("Alterar");
+                    $(".image-preview-clear1").show();
+                    $(".image-preview-filename1").val(file.name);            
+                    img.attr('src', e.target.result);
+                    $(".image-preview1").attr("data-content",$(img)[0].outerHTML).popover("show");
+                }        
+                reader.readAsDataURL(file);
+            });  
+        });
+        </script>
     </body>
 </html>
