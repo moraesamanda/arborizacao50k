@@ -114,7 +114,10 @@
                         <div class="conteudo_painel_int">                        
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <div class="page-header"><h1>Configurações</div>
+                                    <div class="page-header"><h1>Configurações
+                                        <button type="button" class="btn btn-primary btn-sm required-editar" data-toggle="modal" data-target="#modalConfig">
+                                                        <span class="glyphicon glyphicon-edit "></span></button>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row">
@@ -147,6 +150,29 @@
                                    <h3><small>CEP: </small> 18050-504</h3>
                                </div>                                
                             </div>
+                            <div class="row">
+                            <div class="col-sm-7">
+                            <h4>Deseja ser voluntário?</h4>
+                                <div class="input-group">
+                                    <div id="radioBtn" class="btn-group">
+                                        <a class="btn btn-success btn-sm active" data-toggle="Voluntary" data-title="Y">YES</a>
+                                        <a class="btn btn-success btn-sm notActive" data-toggle="Voluntary" data-title="N" disabled="true">NO</a>
+                                    </div>
+                                    <input type="hidden" name="Voluntary" id="Voluntary">
+                                </div>
+                            </div>                            
+                            <div class="col-sm-5">
+                                <h4>Deseja ser guardião?</h4>
+                                <div class="input-group">
+                                    <div id="radioBtn" class="btn-group">
+                                        <a class="btn btn-success btn-sm active" data-toggle="Guardian" data-title="Y" >YES</a>
+                                        <a class="btn btn-success btn-sm notActive" data-toggle="Guardian" data-title="N" disabled="true">NO</a>
+                                    </div>
+                                    <input type="hidden" name="Guardian" id="Guardian">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                         </div>
                     </div>
                 </div>
@@ -166,25 +192,84 @@
 
 
 
-        <div class="modal fade" id="modalPerfil" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal fade" id="modalConfig" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Perfil</h4>
+                        <h4 class="modal-title" id="myModalLabel">Configurações</h4>
                     </div>
                     <div class="modal-body">
-                        <div class="span4">
-                            <label for="model_CorporateName">Perfil:</label>
-                            <div class="required-field-block"> 
-                                <input id="" placeholder="Perfil" type="text"  class="form-control " aria-controls="DataTables_Table_0" required>                          
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <label for="model_CorporateName">Nome</label>
+                                <div class="required-field-block"> 
+                                    <input id="" placeholder="Nome" type="text"  class="form-control " aria-controls="DataTables_Table_0" required>                 
+                                </div>
+                            </div>
+                            <div class="col-lg-5">
+                                <label for="model_CorporateName">Sobrenome</label>
+                                <div class="required-field-block"> 
+                                    <input id="" placeholder="Nome" type="text"  class="form-control " aria-controls="DataTables_Table_0" required>                 
+                                </div>
+                            </div>
+                        </div> 
+
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <label for="model_CorporateName">Endereço</label>
+                                <div class="required-field-block"> 
+                                    <input id="" placeholder="Endereço" type="text"  class="form-control " aria-controls="DataTables_Table_0" required>                 
+                                </div>
+                            </div>
+                            <div class="col-lg-5">
+                                <label for="model_CorporateName">Número</label>
+                                <div class="required-field-block"> 
+                                    <input id="" placeholder="Número" type="text"  class="form-control " aria-controls="DataTables_Table_0" required>                 
+                                </div>
                             </div>
                         </div>                        
 
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <label for="model_CorporateName">Bairro</label>
+                                <div class="required-field-block"> 
+                                    <input id="" placeholder="Bairro" type="text"  class="form-control " aria-controls="DataTables_Table_0" required>                 
+                                </div>
+                            </div>
+                            <div class="col-lg-5">
+                                <label for="model_CorporateName">CEP</label>
+                                <div class="required-field-block"> 
+                                    <input id="" placeholder="CEP" type="text"  class="form-control " aria-controls="DataTables_Table_0" required>                 
+                                </div>
+                            </div>
+                        </div>        
+                        <div class="row">               
+                            <div class="col-sm-7">
+                                <h4>Deseja ser voluntário?</h4>
+                                <div class="input-group">
+                                    <div id="radioBtn" class="btn-group">
+                                        <a class="btn btn-success btn-sm active" data-toggle="Voluntary" data-title="Y">YES</a>
+                                        <a class="btn btn-success btn-sm notActive" data-toggle="Voluntary" data-title="N">NO</a>
+                                    </div>
+                                    <input type="hidden" name="Voluntary" id="Voluntary">
+                                </div>
+                            </div>                            
+                            <div class="col-sm-5">
+                                <h4>Deseja ser guardião?</h4>
+                                <div class="input-group">
+                                    <div id="radioBtn" class="btn-group">
+                                        <a class="btn btn-success btn-sm active" data-toggle="Guardian" data-title="Y" >YES</a>
+                                        <a class="btn btn-success btn-sm notActive" data-toggle="Guardian" data-title="N">NO</a>
+                                    </div>
+                                    <input type="hidden" name="Guardian" id="Guardian">
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" onclick="MessageCadastro();">Salvar</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="showMessageToast('Usuário alterado com sucesso!', 3000);">Salvar</button>
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
                     </div>
                 </div>
@@ -204,11 +289,33 @@
         <script src="js/jquery.tablesorter.pager.js" type="text/javascript"></script>
         <script src="js/paineladm.js" type="text/javascript"></script>
 
+        <script src="js/mascara.js" type="text/javascript"></script>
+        <script src="js/aplicaMascara.js" type="text/javascript"></script>
+
 
 
         <!-- MENSAGEM -->
         <script src="js/jquery.toastmessage.js" type="text/javascript"></script>
 
+        <script type="text/javascript">
 
+        function showMessageToast(message, temp) {
+            $().toastmessage('showToast', {
+                text: "" + message + "",
+                stayTime: temp, position: 'middle-center',
+                type: 'notice'
+            });
+        }   
+
+        $('#radioBtn a').on('click', function(){
+    var sel = $(this).data('title');
+    var tog = $(this).data('toggle');
+    $('#'+tog).prop('value', sel);
+    
+    $('a[data-toggle="'+tog+'"]').not('[data-title="'+sel+'"]').removeClass('active').addClass('notActive');
+    $('a[data-toggle="'+tog+'"][data-title="'+sel+'"]').removeClass('notActive').addClass('active');
+})
+
+        </script>
     </body>
 </html>
