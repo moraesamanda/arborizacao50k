@@ -54,6 +54,13 @@ title: 'Recusado'
 });
 })
 
+$(function() {
+$('.required-total').tooltip({
+placement: 'rigth',
+title: 'Total mudas'
+});
+})
+
 
 
 function showMessageToast(message, temp) {
@@ -98,6 +105,11 @@ function alterarPerfil(){$("#modalPerfil").modal('show');}
 function alterarPerfilUser(){$("#modalPerfilUser").modal('show');}
 
 function alterarMutirao(){$("#modalMutirao").modal('show');}
+
+function alterarMuda(){$("#modalMuda").modal('show');}
+
+
+
 
 
 
