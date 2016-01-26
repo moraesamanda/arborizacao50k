@@ -8,9 +8,7 @@
 
         <!-- COMUM --> 
         <link href="css/bootstrap.css" rel="stylesheet">
-
         <link rel="stylesheet" href="css/font-awesome.min.css">
-
         <link href="css/estilo.css" rel="stylesheet">
         <link href="css/painel.css" rel="stylesheet">
         <link href="css/paineladm.css" rel="stylesheet">
@@ -20,10 +18,10 @@
         <link href="css/table-sorter.css" rel="stylesheet" type="text/css"/>
         <link href="css/tablesorter.pager.css" rel="stylesheet" type="text/css"/>
         <link href="css/dataTables.bootstrap.css" rel="stylesheet" type="text/css"/> 
+        <link href="css/timeline.css" rel="stylesheet">
 
         <!-- MENSAGEM -->
         <link href="css/jquery.toastmessage.css" rel="stylesheet" type="text/css"/>
-
 
     </head>
     <body>
@@ -43,34 +41,54 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#page-top"></a></li>
                         <li>
-                            <a class="" href="#servicos">Serviços</a>
+                            <a class="" href="#publicacoes">Publicações</a>
                         </li>
                         <li>
-                            <a class="" href="#portfolio">Portfolio</a>
+                            <a class="" href="#plantas">Plantas</a>
                         </li>
                         <li>
-                            <a class="" href="#quemsomos">Quem Somos</a>
+                            <a class="" href="#calendario">Calendário</a>
                         </li>
                         <li>
-                            <a class="" href="#localizacao">Localização</a>
+                            <a class="" href="#mutiroes">Mutirões</a>
                         </li>
                         <li>
                             <a class="" href="#contato">Contato</a>
                         </li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="glyphicon glyphicon-user"></i> <span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Minha Conta</a></li>
-                                <li><a href="#">Trocar Senha</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Efetuar Logoff</a></li>
+                            <a class="dropdown-toggle" data-toggle="dropdown">Entrar <b class="caret"></b></a>
+                            <ul class="dropdown-menu" style="padding: 15px;min-width: 250px;" id="dropdown-login">
+                                <li>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                                <div class="form-group">
+                                                    <label class="sr-only" for="exampleInputEmail2">Email</label>
+                                                    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="sr-only" for="exampleInputPassword2">Senha</label>
+                                                    <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Senha" required>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label>
+                                                        <input type="checkbox"> Lembrar-me
+                                                    </label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <button type="submit" class="btn btn-success btn-block">Login</button>
+                                                </div>
+                                                <div class="form-group">
+                                                    <a href="register.html"><button type="button" class="btn btn-success btn-block">Cadastrar</button></a>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </li>
                             </ul>
-                        </li>
-                    </ul>
                 </div>
             </div>
-        </nav> 
-
+        </nav>
         <div class="container-fluid">
             <div class="row-fluid">
                 <div class="col-sm-3">                
@@ -88,6 +106,7 @@
                         </div>                        
                     </div>
                     <!-- /.menu navegação lateral -->
+
                     <!-- menu navegação lateral -->
                     <div class="panel panel-primary">
                         <div id="colGroup1" role="tab" class="panel-heading">
@@ -109,6 +128,7 @@
                         </div>
                     </div>
                     <!-- /.menu navegação lateral -->
+
                     <!-- menu navegação lateral -->
                     <div class="panel panel-primary">
                         <div id="colGroup1" role="tab" class="panel-heading">
@@ -123,6 +143,7 @@
                         </div>                        
                     </div>
                     <!-- /.menu navegação lateral -->
+
                     <!-- menu navegação lateral -->
                     <div class="panel panel-primary">
                         <div id="colGroup1" role="tab" class="panel-heading">
@@ -137,6 +158,7 @@
                         </div>                        
                     </div>
                     <!-- /.menu navegação lateral -->
+
                     <!-- menu navegação lateral -->
                     <div class="panel panel-primary">
                         <div id="colGroup1" role="tab" class="panel-heading">
@@ -156,14 +178,16 @@
                         </div>
                     </div>
                     <!-- /.menu navegação lateral -->
+
                 </div>
                 <div class="col-sm-9">
+
                     <div class="conteudo_painel">                    
                         <div class="conteudo_painel_int">                        
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <div class="page-header"><h1>Perfil
-                                            <a href="#modalPerfil" role="button" class="btn btn-mini btn-success required-inserir" 
+                                    <div class="page-header"><h1>Espécie 
+                                            <a href="#modalEspecie" role="button" class="btn btn-mini btn-success required-inserir" 
                                                data-toggle="modal"><i class="glyphicon glyphicon-plus"></i></a></h1> 
                                     </div>
                                 </div>
@@ -173,35 +197,23 @@
                                     <table class="table tablesorter table-striped sortable table-hover">
                                         <thead>
                                             <tr>
-                                                <th class="header">Perfil</th>                                                 
-                                                <th class="header" id="td-acoes"  width="50px;">Ações</th>
+                                                <th class="header">Espécie</th>                                                                                   
+                                                <th class="header" id="td-acoes" width="50px;">Ações</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-
                                             <tr>
-                                                <td>Administrador 1</td>          
+                                                <td>Espécie A</td>                                                                              
                                                 <td>
-
-                                                    <button type="button" class="btn btn-primary btn-sm required-editar" onclick="alterarPerfil();">
+                                                    <button type="button" class="btn btn-primary btn-sm required-editar" onclick="alterarEspecie();">
                                                         <span class="glyphicon glyphicon-edit "></span></button>
                                                     <button type="button" class="btn btn-danger btn-sm required-excluir" onclick="MessageDelete();"><span class="glyphicon glyphicon-trash"></span></button>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>Administrador 2</td>                                                
+                                                <td>Espécie B</td>                                                
                                                 <td>
-
-                                                    <button type="button" class="btn btn-primary btn-sm required-editar" onclick="alterarPerfil();">
-                                                        <span class="glyphicon glyphicon-edit "></span></button>
-                                                    <button type="button" class="btn btn-danger btn-sm required-excluir" onclick="MessageDelete();"><span class="glyphicon glyphicon-trash"></span></button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Administrador 3</td>                                                
-                                                <td>
-
-                                                    <button type="button" class="btn btn-primary btn-sm required-editar" onclick="alterarPerfil();">
+                                                    <button type="button" class="btn btn-primary btn-sm required-editar" onclick="alterarEspecie();">
                                                         <span class="glyphicon glyphicon-edit "></span></button>
                                                     <button type="button" class="btn btn-danger btn-sm required-excluir" onclick="MessageDelete();"><span class="glyphicon glyphicon-trash"></span></button>
                                                 </td>
@@ -216,22 +228,42 @@
                 </div>
             </div>
         </div>
-
         <!--Start Modal-->
-        <div class="modal fade" id="modalPerfil" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal fade" id="modalEspecie" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Perfil</h4>
+                        <h4 class="modal-title" id="myModalLabel">Espécie</h4>
                     </div>
                     <div class="modal-body">
-                        <div class="span4">
-                            <label for="model_CorporateName">Perfil:</label>
+                        <div>
+                            <label for="model_CorporateName">Espécie:</label>
                             <div class="required-field-block"> 
-                                <input id="" placeholder="Perfil" type="text"  class="form-control " aria-controls="DataTables_Table_0" required>                          
+                                <input id="" placeholder="Espécie" type="text"  class="form-control " aria-controls="DataTables_Table_0" required> <br>                          
                             </div>
                         </div>
+
+                        <!-- image-preview-filename input [CUT FROM HERE]-->
+                        <div class="input-group image-preview">
+                            <input type="text" placeholder="Cartilha de plantio" class="form-control image-preview-filename" disabled="disabled"> <!-- don't give a name === doesn't send on POST/GET -->
+                            <span class="input-group-btn">
+                                <!-- image-preview-clear button -->
+                                <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
+                                    <span class="glyphicon glyphicon-remove"></span> Limpar
+                                </button>
+                                <!-- image-preview-input -->
+                                <div class="btn btn-default image-preview-input">
+                                    <span class="glyphicon glyphicon-folder-open"></span>
+                                    <span class="image-preview-input-title">Cartilha</span>
+                                    <input type="file"  name="input-file-preview"/> <!-- rename it -->
+                                </div>
+                            </span>
+                        </div><!-- /input-group image-preview [TO HERE]--> 
+
+
+                        
+
                     </div>
 
                     <div class="modal-footer">
@@ -242,6 +274,7 @@
             </div>
         </div>
         <!--End Modal-->
+
 
         <!-- TABELA -->   
         <script src="js/jquery-min.js" type="text/javascript"></script>
@@ -255,5 +288,66 @@
 
         <!-- MENSAGEM -->
         <script src="js/jquery.toastmessage.js" type="text/javascript"></script>
+
+        <script>
+        $(document).on('click', '#close-preview', function(){ 
+            $('.image-preview').popover('hide');
+            // Hover befor close the preview
+            $('.image-preview').hover(
+                function () {
+                   $('.image-preview').popover('show');
+                }, 
+                 function () {
+                   $('.image-preview').popover('hide');
+                }
+            );    
+        });
+
+        $(function() {
+            // Create the close button
+            var closebtn = $('<button/>', {
+                type:"button",
+                text: 'x',
+                id: 'close-preview',
+                style: 'font-size: initial;',
+            });
+            closebtn.attr("class","close pull-right");
+            // Set the popover default content
+            $('.image-preview').popover({
+                trigger:'manual',
+                html:true,
+                title: "<strong>Preview</strong>"+$(closebtn)[0].outerHTML,
+                content: "There's no image",
+                placement:'bottom'
+            });
+            // Clear event
+            $('.image-preview-clear').click(function(){
+                $('.image-preview').attr("data-content","").popover('hide');
+                $('.image-preview-filename').val("");
+                $('.image-preview-clear').hide();
+                $('.image-preview-input input:file').val("");
+                $(".image-preview-input-title").text("Foto"); 
+            }); 
+            // Create the preview image
+            $(".image-preview-input input:file").change(function (){     
+                var img = $('<img/>', {
+                    id: 'dynamic',
+                    width:250,
+                    height:200
+                });      
+                var file = this.files[0];
+                var reader = new FileReader();
+                // Set preview image into the popover data-content
+                reader.onload = function (e) {
+                    $(".image-preview-input-title").text("Alterar");
+                    $(".image-preview-clear").show();
+                    $(".image-preview-filename").val(file.name);            
+                    img.attr('src', e.target.result);
+                    $(".image-preview").attr("data-content",$(img)[0].outerHTML).popover("show");
+                }        
+                reader.readAsDataURL(file);
+            });  
+        });
+        </script>
     </body>
 </html>

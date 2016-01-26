@@ -63,6 +63,8 @@ title: 'Total mudas'
 
 
 
+
+
 function showMessageToast(message, temp) {
 $().toastmessage('showToast', {
 text: "" + message + "",
@@ -107,6 +109,11 @@ function alterarPerfilUser(){$("#modalPerfilUser").modal('show');}
 function alterarMutirao(){$("#modalMutirao").modal('show');}
 
 function alterarMuda(){$("#modalMuda").modal('show');}
+
+function alterarEspecie(){$("#modalEspecie").modal('show');}
+
+
+
 
 
 
