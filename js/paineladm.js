@@ -26,6 +26,28 @@ title: 'Compartilhar Facebook'
 });
 })
 
+$(function() {
+$('.autorizar').tooltip({
+placement: 'rigth',
+title: 'Quantidade de notícia autorizar'
+});
+})
+
+$(function() {
+$('.aprovado').tooltip({
+placement: 'rigth',
+title: 'Aprovar'
+});
+})
+
+$(function() {
+$('.recusado').tooltip({
+placement: 'rigth',
+title: 'Recusado'
+});
+})
+
+
 
 function showMessageToast(message, temp) {
 $().toastmessage('showToast', {
@@ -44,6 +66,18 @@ showMessageToast(msg, 15000);
 function MessageCadastro()
 {
 var msg = 'Cadastro realizado com sucesso!';
+showMessageToast(msg, 15000);
+}
+
+function MessageAprovada()
+{
+var msg = 'Notícia Aprovada!';
+showMessageToast(msg, 15000);
+}
+
+function MessageRecusada()
+{
+var msg = 'Notícia Recusada!';
 showMessageToast(msg, 15000);
 }
 
