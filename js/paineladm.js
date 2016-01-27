@@ -6,6 +6,13 @@ title: 'Inserir'
 })
 
 $(function() {
+$('.required-download').tooltip({
+placement: 'rigth',
+title: 'Download da Cartilha'
+});
+})
+
+$(function() {
 $('.required-editar').tooltip({
 placement: 'rigth',
 title: 'Editar'
