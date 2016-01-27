@@ -11,7 +11,7 @@
 
         <link rel="stylesheet" href="css/font-awesome.min.css">
 
-        <link href="css/estilo.css" rel="stylesheet">
+         <link href="css/estilopainel.css" rel="stylesheet">
         <link href="css/painel.css" rel="stylesheet">
         <link href="css/paineladm.css" rel="stylesheet">
         <link rel="shortcut icon" href="imgs/folha.png">
@@ -170,7 +170,6 @@
                         <div role="tabpanel" class="panel-collapse collapse" id="colListGroup3" aria-expanded="false">
                             <ul class="list-group">
                                 <li class="list-group-item"><a href="paineladmestoque.html">Mudas</a></li>
-                                <li class="list-group-item"><a href="paineladmespecie.html">Espécie</a></li>                                
                             </ul>
                             <div class="panel-footer"></div>
                         </div>
@@ -209,7 +208,7 @@
                                         <tbody>
                                             <tr>
                                                 <td>Muda A</td>
-                                                <td>Especie A</td>
+                                                <td>Banana-gigante</td>
                                                 <td>Ceagesp</td>                               
                                                 <td>Rua Terêncio da Costa, 300</td>
                                                 <td>10</td>  
@@ -222,7 +221,7 @@
                                             </tr>
                                             <tr>
                                                 <td>Muda B</td>
-                                                <td>Especie A</td>
+                                                <td>Banana-gigante</td>
                                                 <td>Ceagesp</td>                               
                                                 <td>Rua Terêncio da Costa, 300</td>
                                                 <td>20</td>  
@@ -235,7 +234,7 @@
                                             </tr>
                                             <tr>
                                                 <td>Muda C</td>
-                                                <td>Especie B</td>
+                                                <td>Teste planta</td>
                                                 <td>Flora Morumby</td>                               
                                                 <td>Rua Cláudio Pedro André, 09</td>
                                                 <td>2</td>  
@@ -275,8 +274,11 @@
 
                         <div class="span4">
                             <label>Espécie:</label>
-                            <div class="required-field-block"> 
-                                <input id="" placeholder="Espécie" type="text" class="form-control " required>                          
+                            <div class="required-field-block" > 
+                                <select class="form-control">
+                                  <option value="Banana-gigante">Banana-gigante</option>
+                                  <option value="Teste planta">Teste planta</option>                                  
+                                </select>                          
                             </div>
                         </div>
 
@@ -293,7 +295,8 @@
                             <label for="model_CorporateName">Local retirada:</label>
                             <div class="required-field-block"> 
                                 <input id="" placeholder="Endereço retirada" class="form-control " type="text"  required><br>
-                                <input id="" placeholder="Número" type="number" style="width:150px;" class=" form-control " required >
+                                <input id="" placeholder="Número" type="number" style="width:150px;" class=" form-control " required ><br>
+                                <input id="" placeholder="Bairro" type="number" style="width:150px;" class=" form-control " required >
                             </div>
                         </div>
 
@@ -337,7 +340,7 @@
                         <div class="span4">
                         <label for="instrumento" >Selecione a espécie</label>                            
                             <select name="especie" id="especie" class="form-control " style="width:350px;">                            
-                              <option value="1" selected>Especie A</option>                            
+                              <option value="1" selected>Banana-gigante</option>                            
                               <option value="2">Especie B</option>
                             </select>
                         </div>
