@@ -112,6 +112,11 @@ function alterarMuda(){$("#modalMuda").modal('show');}
 
 function alterarEspecie(){$("#modalEspecie").modal('show');}
 
+function alterarDicas(){$("#modalDica").modal('show');}
+
+
+
+
 
 
 

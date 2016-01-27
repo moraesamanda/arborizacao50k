@@ -177,6 +177,22 @@
                     </div>
                     <!-- /.menu navegação lateral -->
 
+                    <!-- menu navegação lateral -->
+                    <div class="panel panel-primary">
+                        <div id="colGroup1" role="tab" class="panel-heading">
+                            <h4 class="panel-title">
+
+                                <a href="paineladmdicas.html">
+                                    <span class="glyphicon glyphicon-list-alt"></span>
+                                    Dicas</a>
+
+                                </a>
+                            </h4>
+                        </div>                        
+                    </div>
+                    <!-- /.menu navegação lateral -->
+
+
                 </div>
                 <div class="col-sm-9">
 
@@ -184,8 +200,8 @@
                         <div class="conteudo_painel_int">                        
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <div class="page-header"><h1>Espécies 
-                                            <a href="#modalPlanta" role="button" class="btn btn-mini btn-success required-inserir" 
+                                    <div class="page-header"><h1>Dicas 
+                                            <a href="#modalDica" role="button" class="btn btn-mini btn-success required-inserir" 
                                                data-toggle="modal"><i class="glyphicon glyphicon-plus"></i></a></h1> 
                                     </div>
                                 </div>
@@ -195,37 +211,27 @@
                                     <table class="table tablesorter table-striped sortable table-hover">
                                         <thead>
                                             <tr>
-                                                <th class="header">Popular</th>
-                                                <th class="header">Científico</th>
-                                                <th class="header">Curiosidades</th>                                    
+                                                <th class="header">Dicas</th>
+                                                <th class="header">Curiosidades</th>   
+                                                <th class="header">Possui desafio</th>                                                                                   
                                                 <th class="header" id="td-acoes" width="50px;">Ações</th>
                                             </tr>
                                         </thead>
                                         <tbody>
 
                                             <tr>
-                                                <td>Banana-gigante</td>
-                                                <td>Musa ingens</td>
-                                                <td>XXXXXXXXXXXXXXXXXXXXXXXXX</td>                               
+                                                <td>Você sabia que as plantas verdes são os únicos seres vivos que conseguem fabricar o próprio alimento?</td>
+                                                <td>As plantas verdes têm uma substância chamada clorofila. Quando entra em contato com a energia solar, essa substância é capaz de transformar a água e os sais minerais retirados da terra em glicose. A glicose é um tipo de açúcar, que é a fonte de energia das plantas.</td>
+                                                <td>Sim</td>
+
+                                                                              
                                                 <td>
 
-                                                    <button type="button" class="btn btn-primary btn-sm required-editar" onclick="alterar();">
+                                                    <button type="button" class="btn btn-primary btn-sm required-editar" onclick="alterarDicas();">
                                                         <span class="glyphicon glyphicon-edit "></span></button>
                                                     <button type="button" class="btn btn-danger btn-sm required-excluir" onclick="MessageDelete();"><span class="glyphicon glyphicon-trash"></span></button>
                                                 </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Teste planta</td>
-                                                <td>Teste planta</td>
-                                                <td>XXXXXXXXXXXXXXXXXXXXXXXXX</td> 
-                                                <td>
-
-                                                    <button type="button" class="btn btn-primary btn-sm required-editar" onclick="alterar();">
-                                                        <span class="glyphicon glyphicon-edit "></span></button>
-                                                    <button type="button" class="btn btn-danger btn-sm required-excluir" onclick="MessageDelete();"><span class="glyphicon glyphicon-trash"></span></button>
-                                                </td>
-                                            </tr>
-
+                                            
                                         </tbody>
                                     </table>                
                                 </div>
@@ -236,7 +242,7 @@
             </div>
         </div>
         <!--Start Modal-->
-        <div class="modal fade" id="modalPlanta" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal fade" id="modalDica" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -262,7 +268,7 @@
                         <!-- image-preview-filename input [CUT FROM HERE]-->
                         <label>Foto</label>
                         <div class="input-group image-preview">                            
-                            <input type="text" placeholder="Imagem (árvore adulta)" class="form-control image-preview-filename" disabled="disabled"> <!-- don't give a name === doesn't send on POST/GET -->
+                            <input type="text" placeholder="Foto" class="form-control image-preview-filename" disabled="disabled"> <!-- don't give a name === doesn't send on POST/GET -->
                             <span class="input-group-btn">
                                 <!-- image-preview-clear button -->
                                 <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
@@ -278,8 +284,8 @@
                         </div><!-- /input-group image-preview [TO HERE]--> 
 
 
-                        <div class="row">
-                    <div class="col-xs-8 col-sm-offset-3">
+                        
+                    <div class="span12" >
                         <h4>Deseja cadastrar desafio?</h4>
                         <div class="input-group">
                             <div id="radioBtn" class="btn-group">
@@ -289,33 +295,33 @@
                             <input type="hidden" name="desafio" id="radio-end">
                         </div>
                     </div>
-                </div>
+              
 
 
 
-                <div class="row" id="desafio-dicas" style="display:none">
-                    <div class="form-group col-xs-8 col-sm-offset-3" >
+                <div  id="desafio-dicas" style="display:none">
+                    <div>
                         <h3 >Desafio</h3>
-                        <div class="row">
+                        <div>
                             <div>
                                 <h4>Pergunta 1</h4>
-                                <input type="text" class="form-control input-lg" placeholder="Pergunta" name="Street" required="true">
+                                <input type="text"  class="form-control" placeholder="Pergunta" name="Street" required="true">
                             </div>
                             <div>
                                 <h4>Resposta certa</h4>
-                                <input type="text" class="form-control input-lg" min="1" placeholder="Resposta certa" name="Respostacerta" required="true">
+                                <input type="text"  class="form-control" placeholder="Resposta certa" name="Respostacerta" required="true">
                             </div>
                             <div>
                                 <h4>Resposta errada 1</h4>
-                                <input type="text" class="form-control input-lg" min="1" placeholder="Resposta errada 1" name="respostaerrada1" required="true">
+                                <input type="text" class="form-control"  placeholder="Resposta errada 1" name="respostaerrada1" required="true">
                             </div>
                             <div>
                                 <h4>Resposta errada 2</h4>
-                                <input type="text" class="form-control input-lg" min="1" placeholder="Resposta errada 2" name="respostaerrada2" required="true">
+                                <input type="text"  class="form-control" placeholder="Resposta errada 2" name="respostaerrada2" required="true">
                             </div>
                             <div >
                                 <h4>Resposta errada 3</h4>
-                                <input type="text" class="form-control input-lg" min="1" placeholder="Resposta errada 3" name="respostaerrada3" required="true">
+                                <input type="text"   class="form-control" placeholder="Resposta errada 3" name="respostaerrada3" required="true">
                             </div>
                         
                         </div>
