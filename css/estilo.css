@@ -24,7 +24,8 @@ section#contato {
 footer {
     padding-top: 30px;
     padding-bottom: 30px;
-    background: url(../imgs/bgslider.png); 
+    background: #313332; 
+    color: #fbfbfb;
 }
 
 img.grayscale {
