@@ -23,9 +23,8 @@
 
         <!-- MENSAGEM -->
         <link href="css/jquery.toastmessage.css" rel="stylesheet" type="text/css"/>
-    <script type="text/javascript">
-        var randomnb = function(){ return Math.round(Math.random()*300)};
-    </script>  
+        <link href="css/checklist.css" rel="stylesheet">
+    
     </head>
     <body>
         <!-- Menu da aplicação -->
@@ -74,7 +73,7 @@
             </div>
         </nav>  
 
-        <div class="container-fluid">
+        <div class="container-fluid" style="margin-bottom: 30px;">
             <div class="row-fluid">
                 <div class="col-sm-3">                
                     <!-- menu navegação lateral -->
@@ -170,93 +169,73 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                              <div class="box-chart col-lg-10 col-lg-offset-1">
-
-            <canvas id="GraficoLine"></canvas>
-
-            <script type="text/javascript">
-
-                var options = {
-                    responsive:true
-                };
-
-                var data = {
-                    labels: ["Janeiro", "Fevereiro", "Março"],
-                    scaleShowLabels: true,
-                    scaleOverride: true,
-                    datasets: [
-                        {
-                            label: "Banana-Gigante",
-                            fillColor: "rgba(220,220,220,0.2)",
-                            strokeColor: "rgba(220,220,220,1)",
-                            pointColor: "rgba(220,220,220,1)",
-                            pointStrokeColor: "#fff",
-                            pointHighlightFill: "#fff",
-                            pointHighlightStroke: "rgba(220,220,220,1)",
-                            data: [randomnb(),randomnb(),randomnb()]
-                        },
-                        {
-                            label: "Dados secundários",
-                            fillColor: "rgba(151,187,205,0.2)",
-                            strokeColor: "rgba(151,187,205,1)",
-                            pointColor: "rgba(151,187,205,1)",
-                            pointStrokeColor: "#fff",
-                            pointHighlightFill: "#fff",
-                            pointHighlightStroke: "rgba(151,187,205,1)",
-                            data: [28, 48, 40]
-                        }
-                    ]
-                };               
                 
-                window.onload = function(){
-
-                    var ctx = document.getElementById("GraficoLine").getContext("2d");
-                    var LineChart = new Chart(ctx).Line(data, options);
-                }  
-            </script>
-
-        </div>  
+                <div class="row">
+                    <div class="col-xs-8 col-sm-offset-2">
+                        <h4 class="text-center">Árvores</h4>
+                        <div class="well" style="max-height: 150px;overflow: auto;">
+                            <ul class="list-group checked-list-box">
+                                <li class="list-group-item arvore" data-style="button" data-color="success">Flamboyant Mirim</li>
+                                <li class="list-group-item arvore" data-style="button" data-color="success">Grevílea anã</li>
+                                <li class="list-group-item arvore" data-style="button" data-color="success">Falsa murta</li>
+                                <li class="list-group-item arvore" data-style="button" data-color="success">Cróton Codiaeum</li>
+                                <li class="list-group-item arvore" data-style="button" data-color="success">Nome Planta</li>
+                            </ul>
                         </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-8 col-sm-offset-2">
+                        <h4 class="text-center">Localização do Plantio</h4>
+                        <div class="well" style="max-height: 150px;overflow: auto;">
+                            <ul class="list-group checked-list-box">
+                                <li class="list-group-item local" data-style="button" data-color="success">Garagem ocupa toda a frente do terreno.</li>
+                                <li class="list-group-item local" data-style="button" data-color="success">Existe fiação elétrica na calçada.</li>
+                                <li class="list-group-item local" data-style="button" data-color="success">Local de plantio está próximo a um hidrômetro.</li>
+                                <li class="list-group-item local" data-style="button" data-color="success">Calçada tem menos de um metro de largura.</li>
+                                <li class="list-group-item local" data-style="button" data-color="success">Plantio em área de terra no quintal.</li>
+                                <li class="list-group-item local" data-style="button" data-color="success">Plantio ao lado de boca-de-lobo</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" style="margin-bottom:80px;">
+                    <div class="col-xs-1 col-sm-offset-2 ">
+                        <h4>Início: </h4>
+                    </div>
+                    <div class="col-xs-3 ">
+                       <input type="date" class="form-control" requerid>
+                    </div>
+                    <div class="col-xs-1 ">
+                        <h4>Fim: </h4>
+                    </div>
+                    <div class="col-xs-3 ">
+                        <input type="date" class="form-control" requerid>
+                    </div>
+                </div>
+
+
+
+                <div class="row">
+                    <div class="col-lg-12 col-lg-offset-1">
+                    <a class="fa fa-facebook-square fa-2x" href="#" role="button"></a>
+                     <a class="fa fa-linkedin-square fa-2x" href="#" role="button"></a>
+                     <a class="fa fa-google-plus-square fa-2x" href="#" role="button"></a>
+                    </div>
+                </div>    
+            
+            <div class="row">
+                    <div class="col-lg-10 col-lg-offset-1">
+                    <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                    </div>
+                </div> 
+
                     </div>
                 </div>
             </div>
         </div>
-        <!--Start Modal-->
-
-        <div class="modal fade" id="modalUsuario" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Usuário</h4>
-                    </div>
-                    <div class="modal-body">
-                        <div class="span4">
-                            <label for="model_CorporateName">Nome:</label>
-                            <div class="required-field-block"> 
-                                <input id="" placeholder="Nome" type="text"  class="form-control " aria-controls="DataTables_Table_0" required>                          
-                            </div>
-                        </div>
-
-                        <div class="span4">
-                            <label for="model_CorporateName">Senha:</label>
-                            <div class="required-field-block"> 
-                                <input id="" placeholder="Senha" type="password" class="form-control " aria-controls="DataTables_Table_0" required>                          
-                            </div>
-                        </div>                       
-
-                    </div>
-
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" onclick="MessageCadastro();">Salvar</button>
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--End Modal-->
-
 
         <!-- TABELA -->   
         <script src="js/jquery-min.js" type="text/javascript"></script>
@@ -267,10 +246,114 @@
         <script src="js/jquery.tablesorter.min.js" type="text/javascript"></script>
         <script src="js/jquery.tablesorter.pager.js" type="text/javascript"></script>
         <script src="js/paineladm.js" type="text/javascript"></script>
-        <script src="js/Chart.min.js"></script>
-
+       
+        <script src="js/checklist.js" type="text/javascript"></script>
         <!-- MENSAGEM -->
         <script src="js/jquery.toastmessage.js" type="text/javascript"></script>
+
+        <script type="text/javascript">
+    window.onload = function () {
+        var chart = new CanvasJS.Chart("chartContainer",
+        {
+            zoomEnabled: false,
+                        animationEnabled: true,
+            title:{
+                text: "Árvores Plantadas"
+            },
+            axisY2:{
+                valueFormatString:"0.0",
+                
+                maximum: 20,
+                interval: 5,
+                interlacedColor: "#F5F5F5",
+                gridColor: "#D7D7D7",      
+                tickColor: "#D7D7D7"                                
+            },
+                        theme: "theme2",
+                        toolTip:{
+                                shared: true
+                        },
+            legend:{
+                verticalAlign: "bottom",
+                horizontalAlign: "center",
+                fontSize: 15,
+                fontFamily: "Lucida Sans Unicode"
+
+            },
+            data: [
+            {        
+                type: "line",
+                lineThickness:3,
+                axisYType:"secondary",
+                showInLegend: true,           
+                name: "Flamboyant Mirim", 
+                dataPoints: [
+                { x: new Date(2001, 0), y: 5 },
+                { x: new Date(2002, 0), y: 10 },
+                { x: new Date(2003, 0), y: 7},
+                { x: new Date(2004, 0), y: 4 },
+                { x: new Date(2005, 0), y: 5 },
+                { x: new Date(2006, 0), y: 4 }
+
+
+                ]
+            },
+            {        
+                type: "line",
+                lineThickness:3,
+                showInLegend: true,           
+                name: "Grevílea anã",
+                axisYType:"secondary",
+                dataPoints: [
+                { x: new Date(2001, 00), y: 2 },
+                { x: new Date(2002, 00), y: 3 },
+                { x: new Date(2003, 0), y: 15},
+                { x: new Date(2004, 0), y: 14 },
+                { x: new Date(2005, 0), y: 11 },
+                { x: new Date(2006, 0), y: 15 }
+
+
+                ]
+            },
+            {        
+                type: "line",
+                lineThickness:3,
+                showInLegend: true,           
+                name: "Falsa Murta",        
+                axisYType:"secondary",
+                dataPoints: [
+                { x: new Date(2001, 1), y: 3 },
+                { x: new Date(2002, 1), y: 3 },
+                { x: new Date(2003, 1), y: 4 },
+                { x: new Date(2004, 1), y: 3 },
+                { x: new Date(2005, 1), y: 4 },
+                { x: new Date(2006, 1), y: 3 }
+
+
+                ]
+            }
+
+
+
+            ],
+          legend: {
+            cursor:"pointer",
+            itemclick : function(e) {
+              if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+              e.dataSeries.visible = false;
+              }
+              else {
+                e.dataSeries.visible = true;
+              }
+              chart.render();
+            }
+          }
+        });
+
+chart.render();
+}
+</script>
+  <script type="text/javascript" src="js/canvasjs.min.js"></script>
 
     </body>
 </html>
