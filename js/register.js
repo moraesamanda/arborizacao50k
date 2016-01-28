@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$("button:first").click(function(){
+	$("#btn-next").click(function(){
 		if(required(0, 5) && validateEmail()){
 			$(".alert").fadeOut();
 			$("#form-dados-pessoais").css("display", "none");

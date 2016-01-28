@@ -11,6 +11,23 @@
         }
     }
 
+@media ( min-width: 768px ) and ( max-width: 993px ) 
+    {
+       .navbar-toggle{
+        display: block!important;
+       }
+        .navbar-collapse.collapse {
+            display: none!important;
+        }
+    }
+
+    @media ( min-width: 993px ) 
+    {
+        .navbar-header{
+            float:left;
+        }
+    }
+
 section {
     padding-top: 25px;
     padding-bottom: 30px;

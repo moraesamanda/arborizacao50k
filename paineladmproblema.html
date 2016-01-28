@@ -29,7 +29,7 @@
     </head>
     <body>
         <!-- Menu da aplicação -->
-        <nav class="navbar navbar-default navbar" id="navbar-menu">
+      <nav class="navbar navbar-default navbar" id="navbar-menu">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu-navegacao" >
@@ -43,7 +43,7 @@
             <div class="collapse navbar-collapse menu-navegacao" id="menu-navegacao">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#page-top"></a></li>
- <li>
+                    <li>
                         <a class="" href="listapublicacao.html">Publicações</a>
                     </li>
                     <li>
@@ -56,14 +56,15 @@
                         <a class="" href="listamutirao.html">Mutirões</a>
                     </li>
                     <li>
-                        <a class="" href="index.html#contato">Contato</a>
+                        <a class="" href="index.html#dicas">Dicas</a>
                     </li>
-                   
-                    </ul>
-                </div>
-
+                    
+                </ul>
             </div>
-        </nav>     
+            
+        </div>
+      </nav>
+      <!-- // Menu da aplicação -->    
 
 
         <div class="container-fluid">
@@ -73,10 +74,11 @@
                     <div class="panel panel-primary">
                         <div id="colGroup1" role="tab" class="panel-heading">
                             <h4 class="panel-title">
-                                
-                                <a href="guardiaoplantas.html">
+
+                                <a href="paineladmplanta.html">
                                     <span class="glyphicon glyphicon-leaf"></span>
-                                    Minhas Plantas <span class="badge autorizar">3</span></a> 
+                                    Gerenciar Espécie  </a>
+                                </a>
                             </h4>
                         </div>                        
                     </div>
@@ -84,27 +86,111 @@
 
                     <!-- menu navegação lateral -->
                     <div class="panel panel-primary">
-                    <div id="colGroup1" role="tab" class="panel-heading">
-                        <h4 class="panel-title">
-                            <a href="#colListGroup2" aria-controls="colListGroup2" aria-expanded="false" data-toggle="collapse">
-                                
-                                <span class="glyphicon glyphicon-user"></span>
-                                
-                                Minha Conta
-                            </a>
-                        </h4>
+                        <div id="colGroup1" role="tab" class="panel-heading">
+                            <h4 class="panel-title">
+                                <a href="#colListGroup2" aria-controls="colListGroup2" aria-expanded="false" data-toggle="collapse">
+                                    <span class="glyphicon glyphicon-user"></span>
+                                    Gerenciar Usuários
+                                </a>
+                            </h4>
+                        </div>
+                        <div role="tabpanel" class="panel-collapse collapse" id="colListGroup2" aria-expanded="false">
+                            <ul class="list-group">
+                                <li class="list-group-item"><a href="paineladmuser.html">Novo usuário</a></li>
+                                <li class="list-group-item"><a href="paineladmperfil.html">Novo perfil</a></li>
+                                <li class="list-group-item"><a href="paineladmperfilpag.html">Perfil e página</a></li>
+                                <li class="list-group-item"><a href="paineladmperfiluser.html">Perfil e usuário</a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div role="tabpanel" class="panel-collapse collapse" id="colListGroup2" aria-expanded="false">
-                        <ul class="list-group">
-                            <li class="list-group-item"><a href="paineluser.html">Configurações</a></li>
-                                <li class="list-group-item"><a href="trocasenha.html">Trocar Senha</a></li>
-                                <li class="list-group-item"><a href="index.html">Logoff</a></li>
-                        </ul>
-                    </div>
-                </div>
                     <!-- /.menu navegação lateral -->
 
-                </div> 
+                    <!-- menu navegação lateral -->
+                    <div class="panel panel-primary">
+                        <div id="colGroup1" role="tab" class="panel-heading">
+                            <h4 class="panel-title">
+
+                                <a href="paineladmmutirao.html">
+                                    <span class="glyphicon glyphicon-leaf"></span>
+                                    Gerenciar Mutirões </a>
+
+                                </a>
+                            </h4>
+                        </div>                        
+                    </div>
+                    <!-- /.menu navegação lateral -->
+
+                    <!-- menu navegação lateral -->
+                    <div class="panel panel-primary">
+                        <div id="colGroup1" role="tab" class="panel-heading">
+                            <h4 class="panel-title">
+
+                                <a href="paineladmautpubl.html">
+                                    <span class="glyphicon glyphicon-tags"></span>
+                                    Autorizar Publicação <span class="badge autorizar">3</span></a>
+
+                                </a>
+                            </h4>
+                        </div>                        
+                    </div>
+                    <!-- /.menu navegação lateral -->
+<div class="panel panel-primary">
+                        <div id="colGroup1" role="tab" class="panel-heading">
+                            <h4 class="panel-title">
+
+                                <a href="paineladmlistaproblema.html">
+                                    <span class="glyphicon glyphicon-tags"></span>
+                                    Responder Problemas <span class="badge autorizar">1</span></a>
+
+                                </a>
+                            </h4>
+                        </div>                        
+                    </div>
+                    <!-- menu navegação lateral -->
+                    <div class="panel panel-primary">
+                        <div id="colGroup1" role="tab" class="panel-heading">
+                            <h4 class="panel-title">
+                                <a href="#colListGroup3" aria-controls="colListGroup3" aria-expanded="false" data-toggle="collapse">
+                                    <span class="glyphicon glyphicon-list-alt"></span>
+                                    Gerenciar Estoque
+                                </a>
+                            </h4>
+                        </div>
+                        <div role="tabpanel" class="panel-collapse collapse" id="colListGroup3" aria-expanded="false">
+                            <ul class="list-group">
+                                <li class="list-group-item"><a href="paineladmestoque.html">Mudas</a></li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                    <div class="panel panel-primary">
+                        <div id="colGroup1" role="tab" class="panel-heading">
+                            <h4 class="panel-title">
+
+                                <a href="paineladmdicas.html">
+                                    <span class="glyphicon glyphicon-list-alt"></span>
+                                    Dicas</a>
+
+                                </a>
+                            </h4>
+                        </div>                        
+                    </div>
+
+                    <div class="panel panel-primary">
+                        <div id="colGroup1" role="tab" class="panel-heading">
+                            <h4 class="panel-title">
+
+                                <a href="grafico.html">
+                                    <span class="glyphicon glyphicon-list-alt"></span>
+                                    Gerar Gráficos</a>
+
+                                </a>
+                            </h4>
+                        </div>                        
+                    </div>
+                    <!-- /.menu navegação lateral -->
+
+                </div>
 
 
 
