@@ -11,7 +11,7 @@
 
         <link rel="stylesheet" href="css/font-awesome.min.css">
 
-        <link href="css/estilopainel.css" rel="stylesheet">
+         <link href="css/estilopainel.css" rel="stylesheet">
         <link href="css/painel.css" rel="stylesheet">
         <link href="css/paineladm.css" rel="stylesheet">
         <link rel="shortcut icon" href="imgs/folha.png">
@@ -23,8 +23,6 @@
 
         <!-- MENSAGEM -->
         <link href="css/jquery.toastmessage.css" rel="stylesheet" type="text/css"/>
-
-
     </head>
     <body>
         <!-- Menu da aplicação -->
@@ -65,7 +63,7 @@
       </nav>
       <!-- // Menu da aplicação -->
 
-        <div class="container-fluid">
+       <div class="container-fluid">
             <div class="row-fluid">
                 <div class="col-sm-3">                
                     <!-- menu navegação lateral -->
@@ -194,9 +192,8 @@
                         <div class="conteudo_painel_int">                        
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <div class="page-header"><h1>Usuários
-                                            <a href="#modalUsuario" role="button" class="btn btn-mini btn-success required-inserir" 
-                                               data-toggle="modal"><i class="glyphicon glyphicon-plus"></i></a></h1> 
+                                    <div class="page-header"><h1>Reserva mudas                                             
+                                           </h1> 
                                     </div>
                                 </div>
                             </div>
@@ -205,40 +202,35 @@
                                     <table class="table tablesorter table-striped sortable table-hover">
                                         <thead>
                                             <tr>
-                                                <th class="header">Usuário</th>                                                 
-                                                <th class="header" id="td-acoes"  width="50px;">Ações</th>
+                                                <th class="header">Usuario</th>
+                                                <th class="header">Muda</th>
+                                                <th class="header">Espécie</th>                                                
+                                                <th class="header">Status</th>  
+                                                <th class="header">Data vencimento</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-
                                             <tr>
-                                                <td>Amanda</td>          
-                                                <td>
-
-                                                    <button type="button" class="btn btn-primary btn-sm required-editar" onclick="alterarUsuario();">
-                                                        <span class="glyphicon glyphicon-edit "></span></button>
-                                                    <button type="button" class="btn btn-danger btn-sm required-excluir" onclick="MessageDelete();"><span class="glyphicon glyphicon-trash"></span></button>
-                                                </td>
+                                                <td>Amanda</td>
+                                                <td>Muda A</td>
+                                                <td>Banana-gigante</td>
+                                                <td>Reservada</td>                               
+                                                <td>02/02/2016</td>                                                
                                             </tr>
                                             <tr>
-                                                <td>Guilherme</td>                                                
-                                                <td>
-
-                                                    <button type="button" class="btn btn-primary btn-sm required-editar" onclick="alterarUsuario();">
-                                                        <span class="glyphicon glyphicon-edit "></span></button>
-                                                    <button type="button" class="btn btn-danger btn-sm required-excluir" onclick="MessageDelete();"><span class="glyphicon glyphicon-trash"></span></button>
-                                                </td>
+                                                <td>Rodolfo</td>
+                                                <td>Muda B</td>
+                                                <td>Banana-gigante</td>                                               
+                                                <td>Retirada</td>  
+                                                <td>28/01/2016</td> 
                                             </tr>
                                             <tr>
-                                                <td>Rodolfo</td>                                                
-                                                <td>
-
-                                                    <button type="button" class="btn btn-primary btn-sm required-editar" onclick="alterarUsuario();">
-                                                        <span class="glyphicon glyphicon-edit "></span></button>
-                                                    <button type="button" class="btn btn-danger btn-sm required-excluir" onclick="MessageDelete();"><span class="glyphicon glyphicon-trash"></span></button>
-                                                </td>
+                                                <td>Guilherme</td>
+                                                <td>Teste planta</td>
+                                                <td>Flora Morumby</td>                               
+                                                <td>Retirada</td>
+                                                <td>26/01/2016</td> 
                                             </tr>
-
                                         </tbody>
                                     </table>                
                                 </div>
@@ -248,40 +240,8 @@
                 </div>
             </div>
         </div>
-        <!--Start Modal-->
-
-        <div class="modal fade" id="modalUsuario" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Usuário</h4>
-                    </div>
-                    <div class="modal-body">
-                        <div class="span4">
-                            <label for="model_CorporateName">Nome:</label>
-                            <div class="required-field-block"> 
-                                <input id="" placeholder="Nome" type="text"  class="form-control " aria-controls="DataTables_Table_0" required>                          
-                            </div>
-                        </div>
-
-                        <div class="span4">
-                            <label for="model_CorporateName">Senha:</label>
-                            <div class="required-field-block"> 
-                                <input id="" placeholder="Senha" type="password" class="form-control " aria-controls="DataTables_Table_0" required>                          
-                            </div>
-                        </div>                       
-
-                    </div>
-
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" onclick="MessageCadastro();">Salvar</button>
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--End Modal-->
+        
+        
 
         <!-- TABELA -->   
         <script src="js/jquery-min.js" type="text/javascript"></script>
@@ -293,8 +253,13 @@
         <script src="js/jquery.tablesorter.pager.js" type="text/javascript"></script>
         <script src="js/paineladm.js" type="text/javascript"></script>
 
+
+
         <!-- MENSAGEM -->
         <script src="js/jquery.toastmessage.js" type="text/javascript"></script>
+
+         
+
 
     </body>
 </html>
