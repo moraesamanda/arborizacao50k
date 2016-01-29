@@ -161,7 +161,7 @@ img.grayscale:hover {
 
 .navbar-default .navbar-brand{color:#fbfbfb;}
 
-.navbar-default .navbar-nav>li>a {color:#fbfbfb; background-color: #0F5D18;}
+.navbar-default .navbar-nav>li>a {color:#fbfbfb; background-color: #0F5D18; z-index: 9999;}
 
 
  .fix{
