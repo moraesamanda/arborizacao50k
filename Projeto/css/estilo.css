@@ -2,15 +2,6 @@
     font-family: 'Lato', sans-serif; 
 }
 
-@media ( max-height: 642px ) 
-    {
-        footer {
-        position:fixed; bottom:0; left:0; right:0; float:left;
-        width: 100%; 
-        color: white;
-        }
-    }
-
 @media ( min-width: 768px ) and ( max-width: 993px ) 
     {
        .navbar-toggle{
