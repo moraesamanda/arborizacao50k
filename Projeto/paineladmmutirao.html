@@ -23,7 +23,67 @@
 
         <!-- MENSAGEM -->
         <link href="css/jquery.toastmessage.css" rel="stylesheet" type="text/css"/>
+<style>
+.dataTables_paginate, .dataTables_filter{
+                text-align: right;
+            }
 
+
+     
+            @media (max-width: 700px) {
+                .table {
+                    border: 0;
+                    border-bottom-style: solid;
+                    border-bottom-width: 0.0625em;
+                    padding-bottom: 1.4375em;
+                    padding-bottom: 0;
+                    display: block;
+                    width: 100%;
+                }
+                .table thead {
+                    display: none;
+                    visibility: hidden;
+                }
+                .table tbody, table tr, table td {
+                    border: 0;
+                    display: block;
+                    padding: 0;
+                    text-align: left;
+                    white-space: normal;
+                }
+                .table tr {
+                    margin-bottom: 1.5em;
+                    position:relative
+                }
+                .table td[data-title]:before {
+                    content: attr(data-title) ":\00A0";
+                    font-weight: bold;
+                }         
+                .table td:empty {display: none}
+
+                / Configurações Adicionais /
+                .table td[title="mutirao"] { text-align:left }
+                .table td[title="mutirao"]:before { content: "Mutirão:\00A0"; font-weight:bold } 
+
+                / Configurações Adicionais /
+                .table td[title="data"] { text-align:left }
+                .table td[title="data"]:before { content: "Data:\00A0"; font-weight:bold } 
+
+                / Configurações Adicionais /
+                .table td[title="hora"] { text-align:left }
+                .table td[title="hora"]:before { content: "Hora:\00A0"; font-weight:bold }
+
+                / Configurações Adicionais /
+                .table td[title="endereco"] { text-align:left }
+                .table td[title="endereco"]:before { content: "Endereço:\00A0"; font-weight:bold }
+
+
+                / Configurações Adicionais - Alinhamento de data no topo /
+                .table td[title="acao"] { text-align:left }
+                .table td[title="acao"]:before { content: "Ações:\00A0"; font-weight:bold }
+                
+            }
+        </style>
 
     </head>
     <body>
@@ -137,7 +197,7 @@
 
                                 <a href="paineladmlistaproblema.html">
                                     <span class="glyphicon glyphicon-tags"></span>
-                                    Responder Problemas <span class="badge autorizar">1</span></a>
+                                    Responder Problemas <span class="badge ">1</span></a>
 
                                 </a>
                             </h4>
@@ -214,11 +274,11 @@
                                         <tbody>
 
                                             <tr>
-                                                <td>Mutirão A </td>
-                                                <td>02/02/2016</td>
-                                                <td>15:00</td>
-                                                <td>Pq. das Águas</td>                               
-                                                <td>
+                                                <td title="mutirao">Mutirão A </td>
+                                                <td title="data">02/02/2016</td>
+                                                <td title="hora">15:00</td>
+                                                <td title="endereco">Pq. das Águas</td>                               
+                                                <td title="acao">
 
                                                     <button type="button" class="btn btn-primary btn-sm required-editar" onclick="alterarMutirao();">
                                                         <span class="glyphicon glyphicon-edit "></span></button>

@@ -25,6 +25,12 @@ section {
     
 }
 
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #333;   
+    background-color: #fbfbfb;
+    z-index: 9999;
+}
+
 section#contato {
     min-height: 80vh;   
 }
@@ -327,4 +333,5 @@ a:hover{
 
 #dropdown-login{
     background-color: white;
+    z-index: 9999;
 }

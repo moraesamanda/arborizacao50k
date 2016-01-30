@@ -23,6 +23,75 @@
 
         <!-- MENSAGEM -->
         <link href="css/jquery.toastmessage.css" rel="stylesheet" type="text/css"/>
+        <style>
+.dataTables_paginate, .dataTables_filter{
+                text-align: right;
+            }
+
+
+     
+            @media (max-width: 700px) {
+                .table {
+                    border: 0;
+                    border-bottom-style: solid;
+                    border-bottom-width: 0.0625em;
+                    padding-bottom: 1.4375em;
+                    padding-bottom: 0;
+                    display: block;
+                    width: 100%;
+                }
+                .table thead {
+                    display: none;
+                    visibility: hidden;
+                }
+                .table tbody, table tr, table td {
+                    border: 0;
+                    display: block;
+                    padding: 0;
+                    text-align: left;
+                    white-space: normal;
+                }
+                .table tr {
+                    margin-bottom: 1.5em;
+                    position:relative
+                }
+                .table td[data-title]:before {
+                    content: attr(data-title) ":\00A0";
+                    font-weight: bold;
+                }         
+                .table td:empty {display: none}
+
+                / Configurações Adicionais /
+                .table td[title="muda"] { text-align:left }
+                .table td[title="muda"]:before { content: "muda:\00A0"; font-weight:bold } 
+
+                / Configurações Adicionais /
+                .table td[title="especie"] { text-align:left }
+                .table td[title="especie"]:before { content: "Espécie:\00A0"; font-weight:bold } 
+
+                / Configurações Adicionais /
+                .table td[title="doou"] { text-align:left }
+                .table td[title="doou"]:before { content: "Quem Doou:\00A0"; font-weight:bold }
+
+                / Configurações Adicionais /
+                .table td[title="local"] { text-align:left }
+                .table td[title="local"]:before { content: "Local Retirada:\00A0"; font-weight:bold }
+
+/ Configurações Adicionais /
+                .table td[title="estoque"] { text-align:left }
+                .table td[title="estoque"]:before { content: "Estoque:\00A0"; font-weight:bold }
+
+                / Configurações Adicionais /
+                .table td[title="reserva"] { text-align:left }
+                .table td[title="reserva"]:before { content: "Reserva:\00A0"; font-weight:bold }
+
+                / Configurações Adicionais - Alinhamento de data no topo /
+                .table td[title="acao"] { text-align:left }
+                .table td[title="acao"]:before { content: "Ações:\00A0"; font-weight:bold }
+                
+            }
+        </style>
+
     </head>
     <body>
         <!-- Menu da aplicação -->
@@ -136,7 +205,7 @@
 
                                 <a href="paineladmlistaproblema.html">
                                     <span class="glyphicon glyphicon-tags"></span>
-                                    Responder Problemas <span class="badge autorizar">1</span></a>
+                                    Responder Problemas <span class="badge ">1</span></a>
 
                                 </a>
                             </h4>
@@ -217,39 +286,39 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>Muda A</td>
-                                                <td>Banana-gigante</td>
-                                                <td>Ceagesp</td>                               
-                                                <td>Rua Terêncio da Costa, 300</td>
-                                                <td>10</td>  
-                                                <td>5</td>  
-                                                <td>
+                                                <td title="muda">Muda A</td>
+                                                <td title="especie">Banana-gigante</td>
+                                                <td title="doou">Ceagesp</td>                               
+                                                <td title="local">Rua Terêncio da Costa, 300</td>
+                                                <td title="estoque">10</td>  
+                                                <td title="reserva">5</td>  
+                                                <td title="acao">
                                                     <button type="button" class="btn btn-primary btn-sm required-editar" onclick="alterarMuda();">
                                                         <span class="glyphicon glyphicon-edit "></span></button>
                                                     <button type="button" class="btn btn-danger btn-sm required-excluir" onclick="MessageDelete();"><span class="glyphicon glyphicon-trash"></span></button>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>Muda B</td>
-                                                <td>Banana-gigante</td>
-                                                <td>Ceagesp</td>                               
-                                                <td>Rua Terêncio da Costa, 300</td>
-                                                <td>20</td>  
-                                                <td>15</td>  
-                                                <td>
+                                                <td title="muda">Muda B</td>
+                                                <td title="especie">Banana-gigante</td>
+                                                <td title="doou">Ceagesp</td>                               
+                                                <td title="local">Rua Terêncio da Costa, 300</td>
+                                                <td title="estoque">20</td>  
+                                                <td title="reserva">15</td>  
+                                                <td title="acao">
                                                     <button type="button" class="btn btn-primary btn-sm required-editar" onclick="alterarMuda();">
                                                         <span class="glyphicon glyphicon-edit "></span></button>
                                                     <button type="button" class="btn btn-danger btn-sm required-excluir" onclick="MessageDelete();"><span class="glyphicon glyphicon-trash"></span></button>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>Muda C</td>
-                                                <td>Teste planta</td>
-                                                <td>Flora Morumby</td>                               
-                                                <td>Rua Cláudio Pedro André, 09</td>
-                                                <td>2</td>  
-                                                <td>6</td>  
-                                                <td>
+                                                <td title="muda">Muda C</td>
+                                                <td title="especie">Teste planta</td>
+                                                <td title="doou">Flora Morumby</td>                               
+                                                <td title="local">Rua Cláudio Pedro André, 09</td>
+                                                <td title="estoque">2</td>  
+                                                <td title="reserva">6</td>  
+                                                <td title="acao">
                                                     <button type="button" class="btn btn-primary btn-sm required-editar" onclick="alterarMuda();">
                                                         <span class="glyphicon glyphicon-edit "></span></button>
                                                     <button type="button" class="btn btn-danger btn-sm required-excluir" onclick="MessageDelete();"><span class="glyphicon glyphicon-trash"></span></button>
