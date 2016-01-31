@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+    <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />     
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />    
+        <link href="css/estilopainel.css" rel="stylesheet">
+        <link href="css/painel.css" rel="stylesheet">
+        <link href="css/paineladm.css" rel="stylesheet">
+        <link href="css/table-sorter.css" rel="stylesheet" type="text/css"/>
+        <link href="css/tablesorter.pager.css" rel="stylesheet" type="text/css"/>
+        <link href="css/dataTables.bootstrap.css" rel="stylesheet" type="text/css"/> 
+        <title>Arborização 50K</title>
+
+    </head>
+    <body>
+        <nav class="navbar navbar-default navbar" id="navbar-menu">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu-navegacao" >
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>                
+                <a class="navbar-brand" href="index1.html">Arborização 50K</a>
+            </div>  
+            
+            <div class="collapse navbar-collapse menu-navegacao" id="menu-navegacao">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#page-top"></a></li>
+                    <li>
+                        <a class="" href="listapublicacao.html">Publicações</a>
+                    </li>
+                    <li>
+                        <a class="" href="listaplantas.html">Plantas</a>
+                    </li>
+                    <li>
+                        <a class="" href="index1.html#calendario">Calendário</a>
+                    </li>
+                    <li>
+                        <a class="" href="listamutirao.html">Mutirões</a>
+                    </li>
+                    <li>
+                        <a class="" href="index1.html#dicas">Dicas</a>
+                    </li>
+                    <li>
+                        <a class="" href="paineluser.html">Painel</a>
+                    </li>
+                    <li>
+                        <a class="" href="index.html#dicas">Logof</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            
+        </div>
+      </nav>
+
+
+        <div class="card card-container">
+            <div class="row-fluid">
+                <div class="col-sm-3">                
+                    <!-- menu navegação lateral -->
+                    <div class="panel panel-primary">
+                        <div id="colGroup1" role="tab" class="panel-heading">
+                            <h4 class="panel-title">
+                                
+                                <a href="guardiaoplantas.html">
+                                    <span class="glyphicon glyphicon-leaf"></span>
+                                    Minhas Plantas  <span class="badge autorizar">3</span></a> </a>
+                            </h4>
+                        </div>                        
+                    </div>
+                    <!-- /.menu navegação lateral -->
+
+                    <!-- menu navegação lateral -->
+                    <div class="panel panel-primary">
+                    <div id="colGroup1" role="tab" class="panel-heading">
+                        <h4 class="panel-title">
+                            <a href="#colListGroup2" aria-controls="colListGroup2" aria-expanded="false" data-toggle="collapse">
+                                <span class="glyphicon glyphicon-user"></span>                                
+                                Minha Conta
+                            </a>
+                        </h4>
+                    </div>
+                    <div role="tabpanel" class="panel-collapse collapse" id="colListGroup2" aria-expanded="false">
+                        <ul class="list-group">
+                            <li class="list-group-item"><a href="paineluser.html">Configurações</a></li>
+                                <li class="list-group-item"><a href="trocasenha.html">Trocar Senha</a></li>
+                                <li class="list-group-item"><a href="index.html">Logoff</a></li>
+                        </ul>
+                    </div>
+                </div> <!-- /.menu navegação lateral -->
+
+                </div> 
+
+
+
+                <div class="col-sm-9">
+
+                    <div class="conteudo_painel">                    
+                        <div class="conteudo_painel_int">                        
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="page-header"><h1>Configurações
+                                        <button type="button" class="btn btn-primary btn-sm required-editar" data-toggle="modal" data-target="#modalConfig">
+                                                        <span class="glyphicon glyphicon-edit "></span></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-7">
+                                   <h3><small>Nome: </small>José </h3>
+                               </div>
+                               <div class="col-lg-5">
+                                   <h3><small>Sobrenome: </small>Maria</h3>
+                               </div>                                
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                   <h3><small>E-mail: </small>josemaria@empreende.com </h3>
+                               </div>                
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-7">
+                                   <h3><small>Endereço: </small>Avenida das Pitayas </h3>
+                               </div>
+                               <div class="col-lg-5">
+                                   <h3><small>Número: </small> 102</h3>
+                               </div>                                
+                            </div>
+
+                             <div class="row">
+                                <div class="col-lg-7">
+                                   <h3><small>Bairro: </small>Aldeia de Sorocaba </h3>
+                               </div>
+                               <div class="col-lg-5">
+                                   <h3><small>CEP: </small> 18050-504</h3>
+                               </div>                                
+                            </div>
+                            <div class="row">
+                            <div class="col-sm-7">
+                            <h4>Deseja ser voluntário?</h4>
+                                <div class="input-group">
+                                    <div id="radioBtn" class="btn-group">
+                                        <a class="btn btn-success btn-sm active" data-toggle="Voluntary" data-title="Y">YES</a>
+                                        <a class="btn btn-success btn-sm notActive" data-toggle="Voluntary" data-title="N" disabled="true">NO</a>
+                                    </div>
+                                    <input type="hidden" name="Voluntary" id="Voluntary">
+                                </div>
+                            </div>                            
+                            <div class="col-sm-5">
+                                <h4>Deseja ser guardião?</h4>
+                                <div class="input-group">
+                                    <div id="radioBtn" class="btn-group">
+                                        <a class="btn btn-success btn-sm active" data-toggle="Guardian" data-title="Y" >YES</a>
+                                        <a class="btn btn-success btn-sm notActive" data-toggle="Guardian" data-title="N" disabled="true">NO</a>
+                                    </div>
+                                    <input type="hidden" name="Guardian" id="Guardian">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+        <!--Start Modal-->
+
+
+
+        <div class="modal fade" id="modalConfig" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Configurações</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <label for="model_CorporateName">Nome</label>
+                                <div class="required-field-block"> 
+                                    <input id="" placeholder="Nome" type="text"  class="form-control " aria-controls="DataTables_Table_0" required>                 
+                                </div>
+                            </div>
+                            <div class="col-lg-5">
+                                <label for="model_CorporateName">Sobrenome</label>
+                                <div class="required-field-block"> 
+                                    <input id="" placeholder="Nome" type="text"  class="form-control " aria-controls="DataTables_Table_0" required>                 
+                                </div>
+                            </div>
+                        </div> 
+
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <label for="model_CorporateName">Endereço</label>
+                                <div class="required-field-block"> 
+                                    <input id="" placeholder="Endereço" type="text"  class="form-control " aria-controls="DataTables_Table_0" required>                 
+                                </div>
+                            </div>
+                            <div class="col-lg-5">
+                                <label for="model_CorporateName">Número</label>
+                                <div class="required-field-block"> 
+                                    <input id="" placeholder="Número" type="text"  class="form-control " aria-controls="DataTables_Table_0" required>                 
+                                </div>
+                            </div>
+                        </div>                        
+
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <label for="model_CorporateName">Bairro</label>
+                                <div class="required-field-block"> 
+                                    <input id="" placeholder="Bairro" type="text"  class="form-control " aria-controls="DataTables_Table_0" required>                 
+                                </div>
+                            </div>
+                            <div class="col-lg-5">
+                                <label for="model_CorporateName">CEP</label>
+                                <div class="required-field-block"> 
+                                    <input id="" placeholder="CEP" type="text"  class="form-control " aria-controls="DataTables_Table_0" required>                 
+                                </div>
+                            </div>
+                        </div>        
+                        <div class="row">               
+                            <div class="col-sm-7">
+                                <h4>Deseja ser voluntário?</h4>
+                                <div class="input-group">
+                                    <div id="radioBtn" class="btn-group">
+                                        <a class="btn btn-success btn-sm active" data-toggle="Voluntary" data-title="Y">YES</a>
+                                        <a class="btn btn-success btn-sm notActive" data-toggle="Voluntary" data-title="N">NO</a>
+                                    </div>
+                                    <input type="hidden" name="Voluntary" id="Voluntary">
+                                </div>
+                            </div>                            
+                            <div class="col-sm-5">
+                                <h4>Deseja ser guardião?</h4>
+                                <div class="input-group">
+                                    <div id="radioBtn" class="btn-group">
+                                        <a class="btn btn-success btn-sm active" data-toggle="Guardian" data-title="Y" >YES</a>
+                                        <a class="btn btn-success btn-sm notActive" data-toggle="Guardian" data-title="N">NO</a>
+                                    </div>
+                                    <input type="hidden" name="Guardian" id="Guardian">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="showMessageToast('Usuário alterado com sucesso!', 3000);">Salvar</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Modal-->
+
+
+
+        <!-- TABELA -->   
+        <script src="js/jquery-min.js" type="text/javascript"></script>
+        <script src="js/bootstrap.js" type="text/javascript"></script>        
+        <script src="js/table.js" type="text/javascript"></script>
+        <script src="js/jquery.dataTables.js" type="text/javascript"></script>
+        <script src="js/jquery.dataTables.bootstrap.js" type="text/javascript"></script>
+        <script src="js/jquery.tablesorter.min.js" type="text/javascript"></script>
+        <script src="js/jquery.tablesorter.pager.js" type="text/javascript"></script>
+        <script src="js/paineladm.js" type="text/javascript"></script>
+
+        <script src="js/mascara.js" type="text/javascript"></script>
+        <script src="js/aplicaMascara.js" type="text/javascript"></script>
+
+
+
+        <!-- MENSAGEM -->
+        <script src="js/jquery.toastmessage.js" type="text/javascript"></script>
+
+        <script type="text/javascript">
+
+        function showMessageToast(message, temp) {
+            $().toastmessage('showToast', {
+                text: "" + message + "",
+                stayTime: temp, position: 'middle-center',
+                type: 'notice'
+            });
+        }   
+
+        $('#radioBtn a').on('click', function(){
+    var sel = $(this).data('title');
+    var tog = $(this).data('toggle');
+    $('#'+tog).prop('value', sel);
+    
+    $('a[data-toggle="'+tog+'"]').not('[data-title="'+sel+'"]').removeClass('active').addClass('notActive');
+    $('a[data-toggle="'+tog+'"][data-title="'+sel+'"]').removeClass('notActive').addClass('active');
+})
+
+        </script>
+    </body>
+</html>

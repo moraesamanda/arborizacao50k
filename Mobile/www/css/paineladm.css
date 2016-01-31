@@ -1,0 +1,34 @@
+a{
+	color:#FFFCFA;
+}
+
+.table.tablesorter thead tr .header {
+    background-color:#5CB85C;}
+
+    .pagination>.disabled>span, .pagination>.disabled>span:hover, .pagination>.disabled>span:focus, .pagination>.disabled>a, .pagination>.disabled>a:hover, .pagination>.disabled>a:focus {
+    	color: rgba(255,255,255,0.9);
+    background-color: #7D766B;
+    border-color: transparent;
+    cursor: not-allowed;}
+
+.panel-primary>.panel-heading {
+    color: #fff;
+    background-color: #F99910;
+    border-color: #B14107;
+}
+
+.panel-collapse .list-group .list-group-item {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    background-color: #AD6014;
+    border: 1px solid #ddd;}
+
+    .modal-content{z-index: 9999;}
+
+
+
+   
+
+

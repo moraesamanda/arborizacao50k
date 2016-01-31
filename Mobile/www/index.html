@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.theme.min.css" />
+		<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    	<link rel="stylesheet" href="css/font-awesome.min.css">
+        <title>Arborização 50K</title>
+    </head>
+    <body>
+       
+	
+		<div class="container">
+        <div class="card card-container">
+            <img id="profile-img" class="profile-img-card" src="imgs/logo.png" />
+            <h1>Arborização 50K</h1>
+            <p id="profile-name" class="profile-name-card"></p>
+			
+            <form  onSubmit="login();return false;" class="form-signin" >
+                <span id="reauth-email" class="reauth-email"></span>
+                <input type="text" id="inputUsuario" class="form-control" placeholder="Usuario" required autofocus>
+                <input type="password" id="inputSenha" class="form-control" placeholder="Senha" required>
+                <input type="text" id="inputCodigo" class="form-control" placeholder="Codigo" required>
+                <div id="remember" class="checkbox">
+                    <label>
+                        <input type="checkbox" value="remember-me"> Lembre-me
+                    </label>
+                </div>
+                <button class="btn btn-lg btn-success btn-block btn-signin" type="submit" >Entrar</button>
+				
+            </form><!-- /form -->
+			<!--<button class="btn btn-lg btn-primary btn-block btn-signin" onclick="cadastrar();" >Cadastrar</button>-->
+            <a href="#" class="forgot-password">
+                Esqueci minha senha?
+            </a>
+        </div><!-- /card-container -->
+    </div><!-- /container -->
+		
+
+ <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+           
+            app.initialize();
+
+             document.addEventListener("deviceready", onDeviceReady, false);
+
+             function showAlert(mensage,callback) {
+                   navigator.notification.alert(
+                        mensage,callback,'Informação','OK'             
+                    );
+                }
+
+            function showAlertBeep(mensage,callback,qtdbeep) {
+                    navigator.notification.beep(qtdbeep);
+                    showAlert(mensage,callback);
+                    }    
+            
+            function login(){
+                window.location ="paineluser.html";
+            }     
+
+    </script>
+
+    </body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />     
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />    
+        <link href="css/estilo.css" rel="stylesheet">
+        <link href="css/painel.css" rel="stylesheet">
+        <link href="css/paineladm.css" rel="stylesheet">
+        <link href="css/table-sorter.css" rel="stylesheet" type="text/css"/>
+        <link href="css/tablesorter.pager.css" rel="stylesheet" type="text/css"/>
+        <link href="css/dataTables.bootstrap.css" rel="stylesheet" type="text/css"/> 
+        <title>Arborização 50K</title>
+
+        <style>
+            .dataTables_paginate, .dataTables_filter{
+                text-align: right;
+            }
+        </style>
+
+
+        <style>
+
+            @media (max-width: 700px) {
+                .table {
+                    border: 0;
+                    border-bottom-style: solid;
+                    border-bottom-width: 0.0625em;
+                    padding-bottom: 1.4375em;
+                    padding-bottom: 0;
+                    display: block;
+                    width: 100%;
+                }
+                .table thead {
+                    display: none;
+                    visibility: hidden;
+                }
+                .table tbody, table tr, table td {
+                    border: 0;
+                    display: block;
+                    padding: 0;
+                    text-align: left;
+                    white-space: normal;
+                }
+                .table tr {
+                    margin-bottom: 1.5em;
+                    position:relative
+                }
+                .table td[data-title]:before {
+                    content: attr(data-title) ":\00A0";
+                    font-weight: bold;
+                }         
+                .table td:empty {display: none}
+
+                /* Configurações Adicionais */
+                .table td[title="popular"] { text-align:left }
+                .table td[title="popular"]:before { content: "Popular:\00A0"; font-weight:bold } 
+
+                /* Configurações Adicionais */
+                .table td[title="cientifico"] { text-align:left }
+                .table td[title="cientifico"]:before { content: "Científico:\00A0"; font-weight:bold } 
+
+                /* Configurações Adicionais */
+                .table td[title="endereco"] { text-align:left }
+                .table td[title="endereco"]:before { content: "Endereço:\00A0"; font-weight:bold }
+
+
+                /* Configurações Adicionais - Alinhamento de data no topo */
+                .table td[title="acao"] { text-align:left }
+                .table td[title="acao"]:before { content: "Ações:\00A0"; font-weight:bold }
+                
+            }
+        </style>
+
+    </head>
+    <body>
+        <!-- Menu da aplicação -->
+      <nav class="navbar navbar-default navbar" id="navbar-menu">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu-navegacao" >
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>                
+                <a class="navbar-brand" href="index.html">Arborização 50K</a>
+            </div>  
+            
+            <div class="collapse navbar-collapse menu-navegacao" id="menu-navegacao">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#page-top"></a></li>
+                    <li>
+                        <a class="" href="listapublicacao.html">Publicações</a>
+                    </li>
+                    <li>
+                        <a class="" href="listaplantas.html">Plantas</a>
+                    </li>
+                    <li>
+                        <a class="" href="index1.html#calendario">Calendário</a>
+                    </li>
+                    <li>
+                        <a class="" href="listamutirao.html">Mutirões</a>
+                    </li>
+                    <li>
+                        <a class="" href="index1.html#dicas">Dicas</a>
+                    </li>
+                    <li>
+                        <a class="" href="paineluser.html">Painel</a>
+                    </li>
+                    <li>
+                        <a class="" href="index.html#dicas">Logof</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            
+        </div>
+      </nav>
+      <!-- // Menu da aplicação -->
+
+
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="col-sm-3">                
+                    <!-- menu navegação lateral -->
+                    <div class="panel panel-primary">
+                        <div id="colGroup1" role="tab" class="panel-heading">
+                            <h4 class="panel-title">
+                                
+                                <a href="guardiaoplantas.html">
+                                    <span class="glyphicon glyphicon-leaf"></span>
+                                    Minhas Plantas <span class="badge autorizar">3</span></a> 
+                            </h4>
+                        </div>                        
+                    </div>
+                    <!-- /.menu navegação lateral -->
+
+                    <!-- menu navegação lateral -->
+                    <div class="panel panel-primary">
+                    <div id="colGroup1" role="tab" class="panel-heading">
+                        <h4 class="panel-title">
+                            <a href="#colListGroup2" aria-controls="colListGroup2" aria-expanded="false" data-toggle="collapse">
+                                
+                                <span class="glyphicon glyphicon-user"></span>
+                                
+                                Minha Conta
+                            </a>
+                        </h4>
+                    </div>
+                    <div role="tabpanel" class="panel-collapse collapse" id="colListGroup2" aria-expanded="false">
+                        <ul class="list-group">
+                            <li class="list-group-item"><a href="paineluser.html">Configurações</a></li>
+                                <li class="list-group-item"><a href="trocasenha.html">Trocar Senha</a></li>
+                                <li class="list-group-item"><a href="index.html">Logoff</a></li>
+                        </ul>
+                    </div>
+                </div>
+                    <!-- /.menu navegação lateral -->
+
+                </div> 
+
+
+
+                <div class="col-sm-9">
+
+                    <div class="conteudo_painel">                    
+                        <div class="conteudo_painel_int">                        
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="page-header"><h1>Plantas 
+                                            <a href="novaguardiaoplanta.html" role="button" class="btn btn-mini btn-success required-inserir" >
+                                                <i class="glyphicon glyphicon-plus"></i></a></h1> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <table class="table tablesorter table-striped sortable table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th class="header">Popular</th>
+                                                <th class="header">Científico</th>
+                                                <th class="header">Endereço</th>                                    
+                                                <th class="header" id="td-acoes" width="100px;">Ações</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                            <tr>
+                                                <td title="popular">Banana-gigante <span class="badge autorizar">1</span></a> </a></td>
+                                                <td title="cientifico">Musa ingens</td>
+                                                <td title="endereco">Rua das Amóras, 20</td>                               
+                                                <td title="acao">
+
+                                                    <a href="timeline.html"><button type="button" class="btn btn-primary btn-sm required-editar">
+                                                        <span class="glyphicon glyphicon-edit "></span></button></a>
+                                                        <a href="problema.html"><button type="button" class="btn btn-danger btn-sm required-problema" >
+                                                        <span class="glyphicon glyphicon-remove "></span></button></a>
+                                                        <button type="button" class="btn btn-success btn-sm required-download" >
+                                                        <span class="glyphicon glyphicon-download "></span></button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td title="popular">Teste planta <span class="badge autorizar">1</span></a> </a></td>
+                                                <td title="cientifico">Teste planta</td>
+                                                <td title="endereco">Avendia das Pitayas, 500</td> 
+                                                <td title="acao">
+
+                                                    <a href="timelinedireito.html"><button type="button" class="btn btn-primary btn-sm required-editar" >
+                                                        <span class="glyphicon glyphicon-edit "></span></button></a>
+                                                        <a href="problema.html"><button type="button" class="btn btn-danger btn-sm required-problema" >
+                                                        <span class="glyphicon glyphicon-remove "></span></button></a>
+                                                        <button type="button" class="btn btn-success btn-sm required-download" >
+                                                        <span class="glyphicon glyphicon-download "></span></button>
+                                                </td>
+                                            </tr>
+                                             <tr>
+                                     <td title="popular">Teste planta (Reserva) <span class="badge autorizar">1</span></a> </a></td>
+                                                <td title="cientifico">Teste planta</td>
+                                                <td title="endereco">Avendia das Pitayas, 500</td> 
+                                                <td title="acao">
+
+                                                    <a href="timelinereserva.html"><button type="button" class="btn btn-primary btn-sm required-editar" >
+                                                        <span class="glyphicon glyphicon-edit "></span></button></a>
+                                                        <a href="problema.html"><button type="button" class="btn btn-danger btn-sm required-problema" >
+                                                        <span class="glyphicon glyphicon-remove "></span></button></a>
+                                                        <button type="button" class="btn btn-success btn-sm required-download" >
+                                                        <span class="glyphicon glyphicon-download "></span></button>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- TABELA -->   
+        <script src="js/jquery-min.js" type="text/javascript"></script>
+        <script src="js/bootstrap.js" type="text/javascript"></script>        
+        <script src="js/table.js" type="text/javascript"></script>
+        <script src="js/jquery.dataTables.js" type="text/javascript"></script>
+        <script src="js/jquery.dataTables.bootstrap.js" type="text/javascript"></script>
+        <script src="js/jquery.tablesorter.min.js" type="text/javascript"></script>
+        <script src="js/jquery.tablesorter.pager.js" type="text/javascript"></script>
+        <script src="js/paineladm.js" type="text/javascript"></script>
+
+
+
+        <!-- MENSAGEM -->
+        <script src="js/jquery.toastmessage.js" type="text/javascript"></script>
+
+
+    </body>
+</html>
