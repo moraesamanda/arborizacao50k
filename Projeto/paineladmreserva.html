@@ -20,7 +20,65 @@
         <link href="css/table-sorter.css" rel="stylesheet" type="text/css"/>
         <link href="css/tablesorter.pager.css" rel="stylesheet" type="text/css"/>
         <link href="css/dataTables.bootstrap.css" rel="stylesheet" type="text/css"/> 
+<style>
+.dataTables_paginate, .dataTables_filter{
+                text-align: right;
+            }
 
+
+     
+            @media (max-width: 700px) {
+                .table {
+                    border: 0;
+                    border-bottom-style: solid;
+                    border-bottom-width: 0.0625em;
+                    padding-bottom: 1.4375em;
+                    padding-bottom: 0;
+                    display: block;
+                    width: 100%;
+                }
+                .table thead {
+                    display: none;
+                    visibility: hidden;
+                }
+                .table tbody, table tr, table td {
+                    border: 0;
+                    display: block;
+                    padding: 0;
+                    text-align: left;
+                    white-space: normal;
+                }
+                .table tr {
+                    margin-bottom: 1.5em;
+                    position:relative
+                }
+                .table td[data-title]:before {
+                    content: attr(data-title) ":\00A0";
+                    font-weight: bold;
+                }         
+                .table td:empty {display: none}
+
+                / Configurações Adicionais /
+                .table td[title="Usuario"] { text-align:left }
+                .table td[title="Usuario"]:before { content: "Usuário:\00A0"; font-weight:bold } 
+
+                / Configurações Adicionais - Alinhamento de data no topo /
+                .table td[title="Muda"] { text-align:left }
+                .table td[title="Muda"]:before { content: "Muda:\00A0"; font-weight:bold }     
+
+                / Configurações Adicionais /
+                .table td[title="Especie"] { text-align:left }
+                .table td[title="Especie"]:before { content: "Espécie:\00A0"; font-weight:bold } 
+
+                / Configurações Adicionais - Alinhamento de data no topo /
+                .table td[title="Status"] { text-align:left }
+                .table td[title="Status"]:before { content: "Status:\00A0"; font-weight:bold } 
+
+                / Configurações Adicionais - Alinhamento de data no topo /
+                .table td[title="Data"] { text-align:left }
+                .table td[title="Data"]:before { content: "Data Vencimento:\00A0"; font-weight:bold }                
+            }
+        </style>
         <!-- MENSAGEM -->
         <link href="css/jquery.toastmessage.css" rel="stylesheet" type="text/css"/>
     </head>
@@ -136,7 +194,7 @@
 
                                 <a href="paineladmlistaproblema.html">
                                     <span class="glyphicon glyphicon-tags"></span>
-                                    Responder Problemas <span class="badge autorizar">1</span></a>
+                                    Responder Problemas <span class="badge ">1</span></a>
 
                                 </a>
                             </h4>
@@ -211,25 +269,25 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>Amanda</td>
-                                                <td>Muda A</td>
-                                                <td>Banana-gigante</td>
-                                                <td>Reservada</td>                               
-                                                <td>02/02/2016</td>                                                
+                                                <td title="Usuario">Amanda</td>
+                                                <td title="Muda">Muda A</td>
+                                                <td title="Especie">Banana-gigante</td>
+                                                <td title="Status">Reservada</td>                               
+                                                <td title="Data">02/02/2016</td>                                                
                                             </tr>
                                             <tr>
-                                                <td>Rodolfo</td>
-                                                <td>Muda B</td>
-                                                <td>Banana-gigante</td>                                               
-                                                <td>Retirada</td>  
-                                                <td>28/01/2016</td> 
+                                                <td title="Usuario">Rodolfo</td>
+                                                <td title="Muda">Muda B</td>
+                                                <td title="Especie">Banana-gigante</td>                                               
+                                                <td title="Status">Retirada</td>  
+                                                <td title="Data">28/01/2016</td> 
                                             </tr>
                                             <tr>
-                                                <td>Guilherme</td>
-                                                <td>Teste planta</td>
-                                                <td>Flora Morumby</td>                               
-                                                <td>Retirada</td>
-                                                <td>26/01/2016</td> 
+                                                <td title="Usuario">Guilherme</td>
+                                                <td title="Muda">Teste planta</td>
+                                                <td title="Especie">Flora Morumby</td>                               
+                                                <td title="Status">Retirada</td>
+                                                <td title="Data">26/01/2016</td> 
                                             </tr>
                                         </tbody>
                                     </table>                

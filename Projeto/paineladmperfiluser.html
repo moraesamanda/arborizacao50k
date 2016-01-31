@@ -24,7 +24,57 @@
         <!-- MENSAGEM -->
         <link href="css/jquery.toastmessage.css" rel="stylesheet" type="text/css"/>
 
+<style>
+.dataTables_paginate, .dataTables_filter{
+                text-align: right;
+            }
 
+
+     
+            @media (max-width: 700px) {
+                .table {
+                    border: 0;
+                    border-bottom-style: solid;
+                    border-bottom-width: 0.0625em;
+                    padding-bottom: 1.4375em;
+                    padding-bottom: 0;
+                    display: block;
+                    width: 100%;
+                }
+                .table thead {
+                    display: none;
+                    visibility: hidden;
+                }
+                .table tbody, table tr, table td {
+                    border: 0;
+                    display: block;
+                    padding: 0;
+                    text-align: left;
+                    white-space: normal;
+                }
+                .table tr {
+                    margin-bottom: 1.5em;
+                    position:relative
+                }
+                .table td[data-title]:before {
+                    content: attr(data-title) ":\00A0";
+                    font-weight: bold;
+                }         
+                .table td:empty {display: none}
+
+                / Configurações Adicionais /
+                .table td[title="Usuario"] { text-align:left }
+                .table td[title="Usuario"]:before { content: "Usuário:\00A0"; font-weight:bold } 
+
+                / Configurações Adicionais - Alinhamento de data no topo /
+                .table td[title="Perfil"] { text-align:left }
+                .table td[title="Perfil"]:before { content: "Perfil:\00A0"; font-weight:bold }     
+
+                / Configurações Adicionais - Alinhamento de data no topo /
+                .table td[title="acao"] { text-align:left }
+                .table td[title="acao"]:before { content: "Ação:\00A0"; font-weight:bold }                
+            }
+        </style>
     </head>
     <body>
         <!-- Menu da aplicação -->
@@ -138,7 +188,7 @@
 
                                 <a href="paineladmlistaproblema.html">
                                     <span class="glyphicon glyphicon-tags"></span>
-                                    Responder Problemas <span class="badge autorizar">1</span></a>
+                                    Responder Problemas <span class="badge ">1</span></a>
 
                                 </a>
                             </h4>
@@ -212,25 +262,25 @@
                                         <tbody>
 
                                             <tr>
-                                                <td class="span10">Administrador 1</td>    
-                                                <td class="span10">Amanda</td>   
-                                                <td class="span1">
+                                                <td class="span10" title="Perfil">Administrador 1</td>    
+                                                <td class="span10" title="Usuario">Amanda</td>   
+                                                <td class="span1" title="acao">
                                                     <button type="button" class="btn btn-primary btn-sm required-editar" onclick="alterarPerfilUser();">
                                                         <span class="glyphicon glyphicon-edit "></span></button>
                                                     <button type="button" class="btn btn-danger btn-sm required-excluir" onclick="MessageDelete();"><span class="glyphicon glyphicon-trash"></span></button>
                                             </tr>
                                             <tr>
-                                                <td class="span10">Administrador 2</td>    
-                                                <td class="span10">Guilherme</td>   
-                                                <td class="span1">
+                                                <td class="span10" title="Perfil">Administrador 2</td>    
+                                                <td class="span10" title="Usuario">Guilherme</td>   
+                                                <td class="span1" title="acao">
                                                     <button type="button" class="btn btn-primary btn-sm required-editar" onclick="alterarPerfilUser();">
                                                         <span class="glyphicon glyphicon-edit "></span></button>
                                                     <button type="button" class="btn btn-danger btn-sm required-excluir" onclick="MessageDelete();"><span class="glyphicon glyphicon-trash"></span></button>
                                             </tr>
                                             <tr>
-                                                <td class="span10">Administrador 3</td>    
-                                                <td class="span10">Rodolfo</td>   
-                                                <td class="span1">
+                                                <td class="span10" title="Perfil">Administrador 3</td>    
+                                                <td class="span10" title="Usuario">Rodolfo</td>   
+                                                <td class="span1" title="acao">
                                                     <button type="button" class="btn btn-primary btn-sm required-editar" onclick="alterarPerfilUser();">
                                                         <span class="glyphicon glyphicon-edit "></span></button>
                                                     <button type="button" class="btn btn-danger btn-sm required-excluir" onclick="MessageDelete();"><span class="glyphicon glyphicon-trash"></span></button>

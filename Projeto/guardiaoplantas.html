@@ -11,7 +11,7 @@
 
         <link rel="stylesheet" href="css/font-awesome.min.css">
 
-        <link href="css/estilo.css" rel="stylesheet">
+        <link href="css/estilopainel.css" rel="stylesheet">
         <link href="css/painel.css" rel="stylesheet">
         <link href="css/paineladm.css" rel="stylesheet">
         <link rel="shortcut icon" href="imgs/folha.png">
@@ -23,7 +23,63 @@
 
         <!-- MENSAGEM -->
         <link href="css/jquery.toastmessage.css" rel="stylesheet" type="text/css"/>
+   <style>
+.dataTables_paginate, .dataTables_filter{
+                text-align: right;
+            }
 
+
+     
+            @media (max-width: 700px) {
+                .table {
+                    border: 0;
+                    border-bottom-style: solid;
+                    border-bottom-width: 0.0625em;
+                    padding-bottom: 1.4375em;
+                    padding-bottom: 0;
+                    display: block;
+                    width: 100%;
+                }
+                .table thead {
+                    display: none;
+                    visibility: hidden;
+                }
+                .table tbody, table tr, table td {
+                    border: 0;
+                    display: block;
+                    padding: 0;
+                    text-align: left;
+                    white-space: normal;
+                }
+                .table tr {
+                    margin-bottom: 1.5em;
+                    position:relative
+                }
+                .table td[data-title]:before {
+                    content: attr(data-title) ":\00A0";
+                    font-weight: bold;
+                }         
+                .table td:empty {display: none}
+
+                / Configurações Adicionais /
+                .table td[title="Popular"] { text-align:left }
+                .table td[title="Popular"]:before { content: "Popular:\00A0"; font-weight:bold } 
+
+                / Configurações Adicionais /
+                .table td[title="Cientifico"] { text-align:left }
+                .table td[title="Cientifico"]:before { content: "Científico:\00A0"; font-weight:bold } 
+
+                / Configurações Adicionais /
+                .table td[title="Endereco"] { text-align:left }
+                .table td[title="Endereco"]:before { content: "Endereço:\00A0"; font-weight:bold }
+
+
+                / Configurações Adicionais - Alinhamento de data no topo /
+                .table td[title="acao"] { text-align:left }
+                .table td[title="acao"]:before { content: "Ações:\00A0"; font-weight:bold }
+                
+            }
+        </style>
 
     </head>
     <body>
@@ -76,7 +132,7 @@
                                 
                                 <a href="guardiaoplantas.html">
                                     <span class="glyphicon glyphicon-leaf"></span>
-                                    Minhas Plantas <span class="badge autorizar">3</span></a> 
+                                    Minhas Plantas <span class="badge">3</span></a> 
                             </h4>
                         </div>                        
                     </div>
@@ -128,16 +184,16 @@
                                                 <th class="header">Popular</th>
                                                 <th class="header">Científico</th>
                                                 <th class="header">Endereço</th>                                    
-                                                <th class="header" id="td-acoes" width="100px;">Ações</th>
+                                                <th class="header">Ações</th>
                                             </tr>
                                         </thead>
                                         <tbody>
 
                                             <tr>
-                                                <td>Banana-gigante <span class="badge autorizar">1</span></a> </a></td>
-                                                <td>Musa ingens</td>
-                                                <td>Rua das Amóras, 20</td>                               
-                                                <td>
+                                                <td title="Popular">Banana-gigante <span class="badge">1</span></a> </a></td>
+                                                <td title="Cientifico">Musa ingens</td>
+                                                <td title="Endereco">Rua das Amóras, 20</td>                               
+                                                <td title="acao">
 
                                                     <a href="timeline.html"><button type="button" class="btn btn-primary btn-sm required-editar">
                                                         <span class="glyphicon glyphicon-edit "></span></button></a>
@@ -148,10 +204,10 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>Teste planta <span class="badge autorizar">1</span></a> </a></td>
-                                                <td>Teste planta</td>
-                                                <td>Avendia das Pitayas, 500</td> 
-                                                <td>
+                                                <td title="Popular">Teste planta <span class="badge">1</span></a> </a></td>
+                                                <td title="Cientifico">Teste planta</td>
+                                                <td title="Endereco">Avendia das Pitayas, 500</td> 
+                                                <td title="acao">
 
                                                     <a href="timelinedireito.html"><button type="button" class="btn btn-primary btn-sm required-editar" >
                                                         <span class="glyphicon glyphicon-edit "></span></button></a>
@@ -162,10 +218,10 @@
                                                 </td>
                                             </tr>
                                              <tr>
-                                                <td>Teste planta (Reserva) <span class="badge autorizar">1</span></a> </a></td>
-                                                <td>Teste planta</td>
-                                                <td>Avendia das Pitayas, 500</td> 
-                                                <td>
+                                                <td title="Popular">Teste planta (Reserva) <span class="badge">1</span></a> </a></td>
+                                                <td title="Cientifico">Teste planta</td>
+                                                <td title="Endereco">Avendia das Pitayas, 500</td> 
+                                                <td title="acao">
 
                                                     <a href="timelinereserva.html"><button type="button" class="btn btn-primary btn-sm required-editar" >
                                                         <span class="glyphicon glyphicon-edit "></span></button></a>

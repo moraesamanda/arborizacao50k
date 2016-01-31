@@ -187,7 +187,7 @@ $('#radioBtn a').on('click', function(){
 })
 
 function messagemreserva(){
-    showMessageToast("Reserva feita com sucesso!", 3000);
+    showMessageToast("Reserva feita com sucesso! Retire sua planta na Av. Dom Aguirre, 20", 3000);
     setTimeout(function(){
         window.location.href="guardiaoplantas.html"
     }, 3000);

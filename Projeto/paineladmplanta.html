@@ -22,7 +22,63 @@
 
         <!-- MENSAGEM -->
         <link href="css/jquery.toastmessage.css" rel="stylesheet" type="text/css"/>
+<style>
+.dataTables_paginate, .dataTables_filter{
+                text-align: right;
+            }
 
+
+     
+            @media (max-width: 700px) {
+                .table {
+                    border: 0;
+                    border-bottom-style: solid;
+                    border-bottom-width: 0.0625em;
+                    padding-bottom: 1.4375em;
+                    padding-bottom: 0;
+                    display: block;
+                    width: 100%;
+                }
+                .table thead {
+                    display: none;
+                    visibility: hidden;
+                }
+                .table tbody, table tr, table td {
+                    border: 0;
+                    display: block;
+                    padding: 0;
+                    text-align: left;
+                    white-space: normal;
+                }
+                .table tr {
+                    margin-bottom: 1.5em;
+                    position:relative
+                }
+                .table td[data-title]:before {
+                    content: attr(data-title) ":\00A0";
+                    font-weight: bold;
+                }         
+                .table td:empty {display: none}
+
+                / Configurações Adicionais /
+                .table td[title="popular"] { text-align:left }
+                .table td[title="popular"]:before { content: "Popular:\00A0"; font-weight:bold } 
+
+                / Configurações Adicionais /
+                .table td[title="cientifico"] { text-align:left }
+                .table td[title="cientifico"]:before { content: "Científico:\00A0"; font-weight:bold } 
+
+                / Configurações Adicionais /
+                .table td[title="curiosidade"] { text-align:left }
+                .table td[title="curiosidade"]:before { content: "Curiosidade:\00A0"; font-weight:bold }
+
+
+                / Configurações Adicionais - Alinhamento de data no topo /
+                .table td[title="acao"] { text-align:left }
+                .table td[title="acao"]:before { content: "Ações:\00A0"; font-weight:bold }
+                
+            }
+        </style>
     </head>
     <body>
         <!-- Menu da aplicação -->
@@ -135,7 +191,7 @@
 
                                 <a href="paineladmlistaproblema.html">
                                     <span class="glyphicon glyphicon-tags"></span>
-                                    Responder Problemas <span class="badge autorizar">1</span></a>
+                                    Responder Problemas <span class="badge ">1</span></a>
 
                                 </a>
                             </h4>
@@ -212,10 +268,10 @@
                                         <tbody>
 
                                             <tr>
-                                                <td>Banana-gigante</td>
-                                                <td>Musa ingens</td>
-                                                <td>XXXXXXXXXXXXXXXXXXXXXXXXX</td>                               
-                                                <td>
+                                                <td title="popular">Banana-gigante</td>
+                                                <td title="cientifico">Musa ingens</td>
+                                                <td title="curiosidade">XXXXXXXXXXXXXXXXXXXXXXXXX</td>                               
+                                                <td title="acao">
 
                                                     <button type="button" class="btn btn-primary btn-sm required-editar" onclick="alterar();">
                                                         <span class="glyphicon glyphicon-edit "></span></button>
@@ -223,10 +279,10 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>Teste planta</td>
-                                                <td>Teste planta</td>
-                                                <td>XXXXXXXXXXXXXXXXXXXXXXXXX</td> 
-                                                <td>
+                                                <td title="popular">Teste planta</td>
+                                                <td title="cientifico">Teste planta</td>
+                                                <td title="curiosidade">XXXXXXXXXXXXXXXXXXXXXXXXX</td> 
+                                                <td title="acao">
 
                                                     <button type="button" class="btn btn-primary btn-sm required-editar" onclick="alterar();">
                                                         <span class="glyphicon glyphicon-edit "></span></button>
